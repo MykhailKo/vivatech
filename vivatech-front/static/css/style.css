@@ -1086,7 +1086,7 @@ ul.tabs-nav .tab-nav.active {
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 65%;
+    max-width: 60%;
     height: auto;
 }
 
