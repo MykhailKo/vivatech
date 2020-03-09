@@ -28,10 +28,15 @@ class Item(models.Model):
     pub_date = models.DateTimeField('date published')
     description = models.TextField()
     characteristics = ArrayField(models.CharField(max_length=200))
-    reviews = ArrayField(models.TextField(), blank=True)
 
     def __str__(self):
         return self.model
 
-    def leave_review(self, text):
-        self.reviews.append(text)
+class Review(models.Model):
+    item_id = models.ForeignKey(Item, on_delete=models.CASCADE)
+    autor = models.CharField('author name', max_length=50)
+    text = models.CharField('comment', max_length=400)
+    pub_date = models.DateTimeField('data published')
+
+    def __str__(self):
+        return self.autor
