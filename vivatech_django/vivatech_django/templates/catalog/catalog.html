@@ -1,0 +1,10 @@
+{% if categories and sub_categories %}
+    {% for cat in categories %}
+        <li>{{ cat.name }}</li>
+        {% for sub in sub_categories %}
+            {% if sub.category == cat %}
+                <li><a href="{% url 'catalog:sub_category_list' sub.name %}">{{sub.name}}</a></li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,21 @@
+{% if item  %}
+    {{ item.model }}</br>
+    {{ item.producer }}</br>
+    {{ item.country }}</br>
+    {{ item.pub_date }}</br>
+    {{ item.description }}</br>
+    {% for c in item.characteristics %}
+        <li>{{ c }}</li>
+    {% endfor %}</br>
+    <form action="{% url 'catalog:leave_review' item.sub_category.name item.model %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="full_name" placeholder="Your full name">
+        <textarea class="form_text" placeholder="Your review" name="text"></textarea>
+        <input type="submit" value="Submin">
+    </form>
+    {% if reviews %}
+        {% for r in reviews %}
+            {{ r }}</br>
+        {% endfor %}
+    {% endif %}
+{% endif %}
