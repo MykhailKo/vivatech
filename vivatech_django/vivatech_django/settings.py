@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'vivatech_django.apps.home.apps.HomeConfig',
     'vivatech_django.apps.catalog.apps.CatalogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
