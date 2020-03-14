@@ -5,4 +5,4 @@ from .models import Slide
 
 def home_slider(request):
     slides = Slide.objects.all()
-    return render(request, 'home/home.html', {'slides' : slides})
+    return render(request, 'home.html', {'slides' : slides})
