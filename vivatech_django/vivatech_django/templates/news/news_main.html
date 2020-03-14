@@ -1,0 +1,12 @@
+{% if categories and news %}
+    {% for category in categories %}
+        {{ category }}
+    {% endfor %}
+    </br></br></br>
+    {% for new in news %}
+        {{ new.title }}</br>
+        {{ new.pub_date }}</br>
+        {{ new.text }}</br>
+        <a href="{% url 'news:news_detail' new.title %}">More</a>
+    {% endfor %}
+{% endif %}

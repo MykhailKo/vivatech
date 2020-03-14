@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'vivatech_django.apps.news.apps.NewsConfig',
+    'vivatech_django.apps.home.apps.HomeConfig',
     'vivatech_django.apps.catalog.apps.CatalogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +59,9 @@ ROOT_URLCONF = 'vivatech_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(PROJECT_ROOT, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
