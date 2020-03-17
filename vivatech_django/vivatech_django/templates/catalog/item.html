@@ -1,21 +1,86 @@
-{% if item  %}
-  {{ item.model }}</br>
-  {{ item.producer }}</br>
-  {{ item.country }}</br>
-  {{ item.pub_date }}</br>
-  {{ item.description }}</br>
-  {% for c in item.characteristics %}
-      <li>{{ c }}</li>
-  {% endfor %}</br>
-  <form action="{% url 'catalog:leave_review' item.sub_category.name item.model %}" method="post">
-      {% csrf_token %}
-      <input type="text" name="full_name" placeholder="Your full name">
-      <textarea class="form_text" placeholder="Your review" name="text"></textarea>
-      <input type="submit" value="Submin">
-  </form>
-  {% if reviews %}
-      {% for r in reviews %}
-          {{ r }}</br>
-      {% endfor %}
-  {% endif %}
+{% extends 'base.html' %}
+{% load static %}
+{% if item %}
+{% block title %}Vivatech | {{item.model}}{% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/item.css' %}">
+{% endblock %}
+{% block js %}
+<script type='text/javascript' src="{% static 'js/item.js' %}"></script>
+{% endblock %}
+{% block page_title %}Каталог{% endblock %}
+{% block breadcrums %}
+<li><a href="{% url 'catalog:main_category'%}">Каталог</a></li>
+<li><a href="{% url 'catalog:sub_category_list' sub_cat_name %}">{{ sub_cat_name }}</a></li>
+<li><a href="{% url 'catalog:item_detail' sub_cat_name item.model %}">{{ item.model }}</a></li>
+{% endblock %}
+{% block header_img %}<img class="header-img" src="{% static 'images/service-bg.png' %}" alt="">{% endblock %}
+
+{% block main %}
+    <main class="item_main">
+       <div class="item_block">
+           <div class="item_preview" style="background-image: url('{{item.preview_image.url}}')"></div>
+           <div class="item_prop_wrap">
+               <nav class="prop_menu">
+                   <li class="prop_menu_active" id="desc">Описание</li>
+                   <li id="char">Характеристики</li>
+                   <li id="reviews">Отзывы</li>
+               </nav>
+               <div class="item_prop">
+                   <div class="prop_block desc">
+                       <div class="desc_header">
+                           <ul class="main_prop">
+                               <li class="model">{{item.model}}</li>
+                               <li class="producer">
+                                  <span class="char_title">Producer:</span>
+                                  <span class="char_cont">{{item.producer}}</span>
+                               </li>
+                               <li class="prod_country">
+                                  <span class="char_title">Country:</span>
+                                  <span class="char_cont">{{item.country}}</span>
+                               </li>
+                           </ul>
+                           <div class="prod_logo" style="background-image: url('{{item.producer_logo.url}}')"></div>
+                       </div>
+                       <div class="desc_text">
+                           {{item.description}}
+                       </div>
+                   </div>
+                   <div class="prop_block char">
+                       <ul class="char_list">
+                           {% if item.characteristics %}
+                                {% for c in item.characteristics %}
+                                    <li>{{c}}</li>
+                                {% endfor %}
+                           {% endif %}
+                       </ul>
+                   </div>
+                   <div class="prop_block reviews">
+                        <span class="rev_title">Оставить отзыв</span>
+                       <form class="review_form" action="{% url 'catalog:leave_review' item.sub_category.name item.model %}" method="POST"> 
+                            {% csrf_token %}
+                           <input type="text" name="full_name" class="review_name" placeholder="Your name">
+                           <textarea class="review_mes" name="text" placeholder="Your review" rows="3"></textarea>
+                           <button type="submit" class="button gradient-bg review_sub">Send</button>
+                       </form>
+                       <ul class="reviews_list">
+                            <span class="rev_title">Отзывы</span>
+                            {% if reviews %}
+                                {% for r in reviews %}
+                                    <li>
+                                       <div class="review_header">
+                                           <div class="author">{{r.autor}}</div>
+                                           <div class="pub_date">{{r.pub_date}}</div>
+                                       </div>
+                                       <div class="review_text">{{r.text}}</div>
+                                    </li>
+                               {% endfor %}
+                           {% endif %}
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </main>
+{% endblock %}
 {% endif %}

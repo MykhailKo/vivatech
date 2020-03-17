@@ -1,3 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Vivatech | {{sub_cat_name}}{% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/catalog.css' %}">
+{% endblock %}
+{% block page_title %}Каталог{% endblock %}
+{% block breadcrums %}
+<li><a href="{% url 'catalog:main_category'%}">Каталог</a></li>
+<li><a href="{% url 'catalog:sub_category_list' sub_cat_name %}">{{ sub_cat_name }}</a></li>
+{% endblock %}
+{% block header_img %}<img class="header-img" src="{% static 'images/service-bg.png' %}" alt="">{% endblock %}
+
+{% block main %}
+	{% if sub_cat_name %}
+	<main class="catalog_main">
+        <div class="catalog_header">
+            <div class="category_title">{{ sub_cat_name }}</div>
+            <div class="sorting_block">
+                <span class="sorts_title">Сортировка:</span>
+                <select class="sorts">
+                    <option>Price asc</option>
+                    <option>Price desc</option>
+                    <option>Date asc</option>
+                    <option>Date desc</option>
+                </select>
+            </div>
+        </div>
+        <div class="catalog_items">
+        	{% if items %}
+        	{% for item in items %}
+	            <div class="cat_item">
+	                <a href="{% url 'catalog:item_detail' item.sub_category item.model %}"><div class="preview" alt="" style="background-image: url('{{item.preview_image.url}}')"></div></a>
+	                <div class="prod_logo" style="background-image: url('{{item.producer_logo.url}}')"></div>
+	                <ul class="short_char">
+	                    <li class="model">
+	                        <span class="char_title">Model:</span>
+	                        <span class="char_cont">{{item.model}}</span>
+	                    </li>
+	                    <li class="producer">
+	                        <span class="char_title">Producer:</span>
+	                        <span class="char_cont">{{item.producer}}</span>
+	                    </li>
+	                    <li class="prod_country">
+	                        <span class="char_title">Country:</span>
+	                        <span class="char_cont">{{item.country}}</span>
+	                    </li>
+	                </ul>
+	                <a href="{% url 'catalog:item_detail' item.sub_category item.model %}" class="und_none"><div class="more">More<span></span></div></a>
+	            </div>
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+        </div>
+    </main>
+{% endblock %}
 {% if items and sub_cat_name %}
     <h2>{{ sub_cat_name }}</h2>
     {% for item in items %}

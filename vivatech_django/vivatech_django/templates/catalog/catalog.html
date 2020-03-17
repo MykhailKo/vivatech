@@ -1,3 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Vivatech | Каталог{{ item.model }}{% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/categories.css' %}">
+{% endblock %}
+{% block page_title %}Каталог{% endblock %}
+{% block breadcrums %}
+<li><a href="{% url 'catalog:main_category' %}">Каталог</a></li>
+{% endblock %}
+{% block header_img %}<img class="header-img" src="{% static 'images/service-bg.png' %}" alt="">{% endblock %}
+
+{% block main %}
+	<main class="categories_main">
+		{% if categories and sub_categories %}
+		    {% for cat in categories %}
+	   		<div class="cat_block">
+	   			<div class="cat_header">
+	   				{% if cat.icon %}
+	   				<div class="cat_icon" style="background-image: url({{cat.icon.url}})
+	   				"></div>
+	   				{% endif %}
+	   				<div class="cat_title">{{cat.name}}</div>
+	   			</div>
+	   			<ul class="sub_cat_list">
+	   				{% for sub in sub_categories %}
+	            		{% if sub.category == cat %}
+		   					<a href="{% url 'catalog:sub_category_list' sub.name %}"><li class="sub_cat">{{sub.name}}</li></a>
+		   				{% endif %}
+	        		{% endfor %}
+	   			</ul>
+	   		</div>
+	   		{% endfor %}
+		{% endif %}
+   	</main>
+{% endblock %}
 {% if categories and sub_categories %}
     {% for cat in categories %}
         <li>{{ cat.name }}</li>

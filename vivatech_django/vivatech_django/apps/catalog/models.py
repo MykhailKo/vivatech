@@ -4,7 +4,7 @@ from django.contrib.postgres.fields import ArrayField
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
-    icon = models.ImageField(upload_to='category/icon_category', blank=True)#TBD
+    icon = models.ImageField(upload_to='icons_category', help_text="50px50px")#TBD
 
     def __str__(self):
         return self.name
@@ -20,10 +20,10 @@ class SubCategory(models.Model):
 
 class Item(models.Model):
     sub_category = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
-    preview_image = models.ImageField(upload_to='category/item_preview', blank=True)#TBD
+    preview_image = models.ImageField(upload_to='items', blank=True, help_text="150px150px")#TBD
     model = models.CharField(max_length=200)
     producer = models.CharField(max_length=200, blank=True)
-    producer_logo = models.ImageField(upload_to='category/producer_logo', blank=True)#TBD
+    producer_logo = models.ImageField(upload_to='logos', blank=True, help_text="50px50px")#TBD
     country = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     description = models.TextField()
@@ -31,6 +31,7 @@ class Item(models.Model):
 
     def __str__(self):
         return self.model
+
 
 class Review(models.Model):
     item_id = models.ForeignKey(Item, on_delete=models.CASCADE)

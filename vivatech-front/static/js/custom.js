@@ -134,4 +134,3 @@ $(document).ready(function(){
         $('.portfolio-item:hidden').slice(0, 9).addClass('visible');
     });
 })
-    
