@@ -54,3 +54,12 @@
         </div>
     </main>
 {% endblock %}
+{% if items and sub_cat_name %}
+    <h2>{{ sub_cat_name }}</h2>
+    {% for item in items %}
+        <li>{{item.model}}</li>
+        <li>{{item.producer}}</li>
+        <li>{{item.country}}</li>
+        <a href="{% url 'catalog:item_detail' item.sub_category item.model %}">More</a></br>
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Vivatech | Новости{% endblock %}
+{% block page_title %}Новости{% endblock %}
+{% block breadcrums %}
+<li><a href="{% url 'news:news_main' 1 %}">Новости</a></li>
+{% endblock %}
+{% block header_img %}<img class="header-img" src="{% static 'images/news-bg.png' %}" alt="">{% endblock %}
+
+{% block main %}
+<div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="the-news">
+                    <div class="row">
+                        {% if news %}
+                            {% for n in news %}
+                            <div class="col-12 col-md-6">
+                                <div class="the-news-wrap">
+                                    <figure class="post-thumbnail">
+                                        <a href="{% url 'news:news_detail' n.category cur_page n.title %}"><img src="{{n.preview_image.url}}" alt=""></a>
+                                    </figure>
+
+                                    <header class="entry-header">
+                                        <h3>{{n.title}}</h3>
+
+                                        <div class="post-metas d-flex flex-wrap align-items-center">
+                                            <div class="posted-date"><label>Дата: </label><a href="#">{{n.pub_date}}</a></div>
+                                            <div class="posted-date"><label>Категория: </label><a href="{% url 'news:ordered_by' n.category 1 %}">{{n.category}}</a></div>
+                                        </div>
+                                    </header>
+
+                                    <div class="entry-content">
+                                        <p>{{n.text|slice:"0:100"}}...</p>
+                                    </div>
+
+                                    <footer class="entry-footer mt-5">
+                                        <a class="button gradient-bg" href="{% url 'news:news_detail' n.category cur_page n.title %}">Читать далее</a>
+                                    </footer>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            <div class="col-12">
+                                <ul class="pagination d-flex flex-wrap align-items-center p-0">
+                                    {% if cur_category %}
+                                        {% for p in pages_num %}
+                                            <li {% if p == cur_page %}class="active"{% endif %}><a href="{% url 'news:ordered_by' cur_category p %}">{{p}}</a></li>
+                                        {% endfor %}
+                                    {% else %}
+                                        {% for p in pages_num %}
+                                            <li {% if p == cur_page %}class="active"{% endif %}><a href="{% url 'news:news_main' p %}">{{p}}</a></li>
+                                        {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="sidebar">
+                    <div class="sidebar-cats">
+                        <h2 class="widget-title">Категории</h2>
+
+                        <ul class="p-0 m-0">
+                            {% if categories %}
+                                {% for cat in categories %}
+                                    <li><a href="{% url 'news:ordered_by' cat.name 1 %}">{{cat.name}}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                                    <li><a href="{% url 'news:news_main' 1 %}">Все</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="popular-posts">
+                        <h2 class="widget-title">Последние новости</h2>
+
+                        <ul class="p-0 m-0">
+                            {% if news %}
+                                {% for ln in news|slice:"0:3" %}
+                                    <li class="d-flex flex-wrap justify-content-between">
+                                        <figure><a href="{% url 'news:news_detail' ln.category cur_page ln.title %}"><img src="{{ln.preview_image.url}}" alt="" style="max-width: 4em"></a></figure>
+
+                                        <div class="entry-content">
+                                            <h3 class="entry-title"><a href="{% url 'news:news_detail' ln.category cur_page ln.title %}">{{ln.title}}</a></h3>
+
+                                            <div class="posted-date">{{ln.pub_date}}</div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </div><!-- .cat-links -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
