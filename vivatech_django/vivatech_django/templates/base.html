@@ -89,7 +89,7 @@
     </header><!-- .site-header -->
 
     {% block main %}{% endblock %}
-    
+
     <div class="subscribe-banner">
         <div class="container">
             <div class="row">
@@ -97,7 +97,8 @@
                     <h2>У Вас есть вопросы? Оставьте свой email и мы с Вами свяжемся.</h2>
 
                     <form>
-                        <input type="email" placeholder="E-mail address">
+						{% csrf_token %}
+                        <input type="email" placeholder="E-mail address" name="email">
                         <input class="button gradient-bg" type="submit" value="Отправить">
                     </form>
                 </div>

@@ -6,4 +6,5 @@ app_name = 'slider'
 
 urlpatterns = [
     path('', views.home_slider, name='home'),
+    path('sending_mail/', views.sending_mail, name='sending_mail'),
 ]

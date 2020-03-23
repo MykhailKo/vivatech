@@ -85,8 +85,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'vivatech',
         'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '64.227.66.139',
+        'PASSWORD': '12345678',
+        'HOST': 'vivatech.cflqacfzcjh7.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
