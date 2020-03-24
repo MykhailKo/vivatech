@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'vivatech_django.apps.jobs.apps.JobsConfig',
     'vivatech_django.apps.news.apps.NewsConfig',
     'vivatech_django.apps.home.apps.HomeConfig',
     'vivatech_django.apps.catalog.apps.CatalogConfig',
@@ -85,8 +86,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'vivatech',
         'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '64.227.66.139',
+        'PASSWORD': '12345678',
+        'HOST': 'vivatech.cflqacfzcjh7.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }

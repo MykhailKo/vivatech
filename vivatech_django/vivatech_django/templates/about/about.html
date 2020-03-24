@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Vivatech | О нас{% endblock %}
+{% block page_title %}О нас{% endblock %}
+{% block breadcrums %}
+<li><a href="{% url 'about_page' %}">О нас</a></li>
+{% endblock %}
+{% block header_img %}<img class="header-img" src="{% static 'images/about-bg.png' %}" alt="">{% endblock %}
+
+{% block main %}
+	<div class="med-history">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-lg-6">
+                    <h2>Виватек история</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Curabitur ut augue finibus, luctus tortor at, ornare erat. Nulla facilisi. Sed est risus, laoreet et quam non, viverra accumsan leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Curabitur ut augue finibus, luctus tortor at, ornare erat. </p>
+            </div>
+            <div class="col-6 col-lg-6 mt-5 mt-lg-0">
+                <img class="responsive" src="{% static 'images/about.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="faq-stuff">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 mt-6 mt-lg-5">
+                    <h2>Вакансии</h2>
+                </div>
+
+                 <div class="col-12 col-lg-8 mt-6 mt-lg-0">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="professional-box">
+                                <h2 class="d-flex align-items-center">Профессионализм</h2>
+
+                                <img src="{% static 'images/cardiogram-2.png' %}" alt="">
+
+                                <p>Lorem ipsum dolor sit amet, cons ectetur adipiscing elit. Donec males uada lorem.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="quality-box">
+                                <h2 class="d-flex align-items-center">Качество</h2>
+
+                                <img src="{% static 'images/hospital.png' %}" alt="">
+
+                                <p>Lorem ipsum dolor sit amet, cons ectetur adipiscing elit. Donec males uada lorem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-12 mb-5 mb-lg-0">
+                    <div class="accordion-wrap type-accordion">
+                    	{% if jobs %}
+                    		{% for job in jobs %}
+	                        <h3 class="entry-title d-flex justify-content-between align-items-center"><span>{{job.position}}</span><span class="arrow-r"></span></h3>
+
+	                        <div class="entry-content">
+	                            <div class="job_block">
+	                                <ul class="job_req">	                    
+	                                    <span class="job_title">Требования</span>
+	                                    {% for r in job.requirements %}
+	                                    	<li>{{r}}</li>
+	                                   	{% endfor %}
+	                                </ul>
+	                                <ul class="job_resp">
+	                                    <span class="job_title">Обязанности</span>
+	                                    {% for res in job.responsibilities %} 
+	                                    	<li>{{res}}</li>
+	                                    {% endfor %}
+	                                </ul>
+	                                <ul class="job_prep">
+	                                    <span class="job_title">Мы предлагаем</span>
+	                                    {% for res in job.conditions %} 
+	                                    	<li>{{res}}</li>
+	                                    {% endfor %}
+	                                </ul>
+	                            </div>
+	                        </div>
+                        	{% endfor %}
+                     	{% endif %}
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="medical-team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Наши партнеры</h2>
+                </div>
+                {% if brands %}
+                	{% for brand in brands %}
+	                <div class="col-12 col-md-6 col-lg-3">
+	                    <div class="medical-team-wrap">
+	                        <a href="{{brand.brand_website}}" target="_blank"><img src="{{brand.logo.url}}" alt=""></a>
+
+	                        <h4>{{brand.name}}</h4>
+	                        <h5>{{brand.country}}</h5>
+	                    </div>
+	                </div>
+                	{% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="services_block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Сервисное обслуживание</h2>
+                    <div class="col-12 col-lg-12 mb-5 mb-lg-0">
+                    <div class="accordion-wrap type-accordion">
+                    	{% if services %}
+                    		{% for service in services %}
+	                        <h3 class="entry-title d-flex justify-content-between align-items-center">
+	                            <div>
+	                            <i class="fa {{service.icon}}"></i>
+	                            {{service.title}}
+	                            </div>
+	                            <span class="arrow-r"></span></h3>
+
+	                        <div class="entry-content">
+	                            <div class="service_block">
+	                                <p>{{service.text}}</p>
+	                            </div>
+	                        </div>
+                        	{% endfor %}
+                        {% endif %}
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

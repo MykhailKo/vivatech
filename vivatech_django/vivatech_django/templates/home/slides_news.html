@@ -26,3 +26,29 @@
     {% endfor %}
 {% endif %}
 {% endblock %}
+
+{% block news %}
+    {% if news %}
+        {% for n in news %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="the-news-wrap">
+                    <figure class="post-thumbnail">
+                        <a href="{% url 'news:news_detail' n.category 1 n.title %}"><img src="{{n.preview_image.url}}" alt=""></a>
+                    </figure>
+
+                    <header class="entry-header">
+                        <h3>{{n.title}}</h3>
+                        <div class="post-metas d-flex flex-wrap align-items-center">
+                        <div class="posted-date"><label>Дата: </label><a href="#">{{n.pub_date}}</a></div>
+                        <div class="posted-date"><label>Категория: </label><a href="{% url 'news:ordered_by' n.category 1 %}">{{n.category}}</a></div>
+                        </div>
+                    </header>
+
+                    <div class="entry-content">
+                        <p>{{n.text|slice:"0:150"}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

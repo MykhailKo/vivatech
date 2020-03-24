@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/dm-lab-03/.idea/dm-lab-03.iml" filepath="$USER_HOME$/PycharmProjects/dm-lab-03/.idea/dm-lab-03.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/ta-lab-04/.idea/ta-lab-04.iml" filepath="$USER_HOME$/PycharmProjects/ta-lab-04/.idea/ta-lab-04.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vivatech_django.iml" filepath="$PROJECT_DIR$/.idea/vivatech_django.iml" />
     </modules>
   </component>

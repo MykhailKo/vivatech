@@ -2,14 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Slide
 from .models import Slider
+from news.models import News
 
 
-#def home_slider(request):
-#    slides = Slide.objects.all()
-#    return render(request, 'home.html', {'slides' : slides})
-
-
-def home_slider(request):
+def home_slides_news(request):
     slides = Slider.objects.all()
-    return render(request, 'slide/slide.html', {'slides' : slides})
-
+    news = News.objects.all().order_by('-pub_date')[0:3]
+    return render(request, 'home/slides_news.html', {'slides': slides, 'news': news})
