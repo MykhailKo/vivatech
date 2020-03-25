@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-24 13:14+0200\n"
+"POT-Creation-Date: 2020-03-25 15:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,163 +23,167 @@ msgstr ""
 
 #: .\vivatech_django\apps\catalog\apps.py:7
 msgid "Catalog"
-msgstr ""
+msgstr "Каталог"
 
 #: .\vivatech_django\apps\catalog\models.py:7
 msgid "Name of your category"
-msgstr ""
+msgstr "Назва вашої категорії"
 
 #: .\vivatech_django\apps\catalog\models.py:7
 #: .\vivatech_django\apps\catalog\models.py:19
 #: .\vivatech_django\apps\news\models.py:8
 msgid "name"
-msgstr ""
+msgstr "назва"
 
 #: .\vivatech_django\apps\catalog\models.py:8
 msgid "icon"
-msgstr ""
+msgstr "значок"
 
 #: .\vivatech_django\apps\catalog\models.py:14
 #: .\vivatech_django\apps\news\models.py:14
 msgid "Category"
-msgstr ""
+msgstr "Категорія"
 
 #: .\vivatech_django\apps\catalog\models.py:15
 #: .\vivatech_django\apps\news\models.py:15
 msgid "Categories"
-msgstr ""
+msgstr "Категорії"
 
 #: .\vivatech_django\apps\catalog\models.py:19
 msgid "Name of your sub category"
-msgstr ""
+msgstr "Назва підкатегорії"
 
 #: .\vivatech_django\apps\catalog\models.py:20
 msgid "category"
-msgstr ""
+msgstr "категорія"
 
 #: .\vivatech_django\apps\catalog\models.py:26
 msgid "Sub category"
-msgstr ""
+msgstr "Підкатегорія"
 
 #: .\vivatech_django\apps\catalog\models.py:27
 msgid "Sub categories"
-msgstr ""
+msgstr "Підкатегорії"
 
 #: .\vivatech_django\apps\catalog\models.py:31
 msgid "sub category"
-msgstr ""
+msgstr "підкатегорія"
 
 #: .\vivatech_django\apps\catalog\models.py:32
 #: .\vivatech_django\apps\news\models.py:22
 msgid "preview image"
-msgstr ""
+msgstr "картинка"
 
 #: .\vivatech_django\apps\catalog\models.py:33
 msgid "Name of your model"
-msgstr ""
+msgstr "Назва вашої моделі"
 
 #: .\vivatech_django\apps\catalog\models.py:33
 msgid "Model name"
-msgstr ""
+msgstr "Назва моделі"
 
 #: .\vivatech_django\apps\catalog\models.py:34
 msgid "Producer name"
-msgstr ""
+msgstr "Назва виробника"
 
 #: .\vivatech_django\apps\catalog\models.py:34
 msgid "producer"
-msgstr ""
+msgstr "виробник"
 
 #: .\vivatech_django\apps\catalog\models.py:35
 msgid "producer logo"
-msgstr ""
+msgstr "логотип виробника"
 
 #: .\vivatech_django\apps\catalog\models.py:36
 msgid "Country of manufacture"
-msgstr ""
+msgstr "Країна виробник"
 
 #: .\vivatech_django\apps\catalog\models.py:36
 msgid "country"
-msgstr ""
+msgstr "країна"
 
 #: .\vivatech_django\apps\catalog\models.py:37
 #: .\vivatech_django\apps\news\models.py:21
 msgid "date published"
-msgstr ""
+msgstr "дата опублікування"
 
 #: .\vivatech_django\apps\catalog\models.py:38
 msgid "description"
-msgstr ""
+msgstr "опис"
 
 #: .\vivatech_django\apps\catalog\models.py:39
 msgid "characteristics"
-msgstr ""
+msgstr "характеристики"
 
 #: .\vivatech_django\apps\catalog\models.py:45
 msgid "Item"
-msgstr ""
+msgstr "Предмет"
 
 #: .\vivatech_django\apps\catalog\models.py:46
 msgid "Items"
-msgstr ""
+msgstr "Предмети"
 
 #: .\vivatech_django\apps\catalog\models.py:51
 msgid "author name"
-msgstr ""
+msgstr "ім'я автора"
 
 #: .\vivatech_django\apps\catalog\models.py:52
 msgid "comment"
-msgstr ""
+msgstr "коментар"
 
 #: .\vivatech_django\apps\catalog\models.py:53
 msgid "data published"
-msgstr ""
+msgstr "опубліковані дані"
 
 #: .\vivatech_django\apps\catalog\models.py:59
 msgid "Review"
-msgstr ""
+msgstr "Огляд"
 
 #: .\vivatech_django\apps\catalog\models.py:60
 msgid "Reviews"
-msgstr ""
+msgstr "Відгуки"
+
+#: .\vivatech_django\apps\home\apps.py:7
+msgid "Home"
+msgstr "Домашня сторінка"
 
 #: .\vivatech_django\apps\home\models.py:7
 #: .\vivatech_django\apps\home\models.py:16
 msgid "title"
-msgstr ""
+msgstr "назва"
 
 #: .\vivatech_django\apps\home\models.py:10
 msgid "Slide"
-msgstr ""
+msgstr "Слайд"
 
 #: .\vivatech_django\apps\home\models.py:11
 msgid "Slides"
-msgstr ""
+msgstr "Слайди"
 
 #: .\vivatech_django\apps\home\models.py:15
 msgid "Backeground image"
-msgstr ""
+msgstr "Фонове зображення"
 
 #: .\vivatech_django\apps\home\models.py:17
 #: .\vivatech_django\apps\news\models.py:23
 msgid "text"
-msgstr ""
+msgstr "текст"
 
 #: .\vivatech_django\apps\home\models.py:18
 msgid "Link"
-msgstr ""
+msgstr "Посилання"
 
 #: .\vivatech_django\apps\home\models.py:25
 msgid "Slider"
-msgstr ""
+msgstr "Слайдер"
 
 #: .\vivatech_django\apps\home\models.py:26
 msgid "Sliders"
-msgstr ""
+msgstr "Слайдери"
 
 #: .\vivatech_django\apps\jobs\apps.py:7
 msgid "Jobs"
-msgstr ""
+msgstr "Вакансії"
 
 #: .\vivatech_django\apps\jobs\views.py:7
 msgid "Hello jobs! Jobs application view for about page."
@@ -189,59 +193,59 @@ msgstr ""
 #: .\vivatech_django\apps\news\models.py:33
 #: .\vivatech_django\apps\news\models.py:34
 msgid "News"
-msgstr ""
+msgstr "Новини"
 
 #: .\vivatech_django\apps\news\models.py:19
 msgid "news"
-msgstr ""
+msgstr "новини"
 
 #: .\vivatech_django\settings.py:118
 msgid "English"
-msgstr ""
+msgstr "Англійська"
 
 #: .\vivatech_django\settings.py:119
 msgid "Russian"
-msgstr ""
+msgstr "російський"
 
 #: .\vivatech_django\settings.py:120
 msgid "Ukrainian"
-msgstr ""
+msgstr "Українська"
 
 #: .\vivatech_django\templates\admin\base_site.html:27
 msgid "Documentation"
-msgstr ""
+msgstr "Документація"
 
 #: .\vivatech_django\templates\admin\base_site.html:31
 msgid "Change password"
-msgstr ""
+msgstr "Змінити пароль"
 
 #: .\vivatech_django\templates\admin\base_site.html:33
 msgid "Log out"
-msgstr ""
+msgstr "Вийти"
 
 #: .\vivatech_django\templates\home.html:47
 msgid "Главная"
-msgstr ""
+msgstr "Головна"
 
 #: .\vivatech_django\templates\home.html:48
 msgid "Каталог"
-msgstr ""
+msgstr "Каталог"
 
 #: .\vivatech_django\templates\home.html:49
 msgid "Новости"
-msgstr ""
+msgstr "Новини"
 
 #: .\vivatech_django\templates\home.html:50
 msgid "О нас"
-msgstr ""
+msgstr "Про нас"
 
 #: .\vivatech_django\templates\home.html:51
 msgid "Контакты"
-msgstr ""
+msgstr "Контакти"
 
 #: .\vivatech_django\templates\home.html:92
 msgid "Наши направления"
-msgstr ""
+msgstr "Наші напрямки"
 
 #: .\vivatech_django\templates\home.html:100
 msgid "Cardioology"

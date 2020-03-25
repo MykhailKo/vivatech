@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-24 13:14+0200\n"
+"POT-Creation-Date: 2020-03-25 15:56+0200\n"
 "PO-Revision-Date: 2020-03-24 11:30+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,12 +143,18 @@ msgstr "Обзор"
 msgid "Reviews"
 msgstr "Обзоры"
 
+#: .\vivatech_django\apps\home\apps.py:7
+msgid "Home"
+msgstr "Домашняя страница"
+
 #: .\vivatech_django\apps\home\models.py:7
 #: .\vivatech_django\apps\home\models.py:16
 msgid "title"
 msgstr "Заголовок"
 
 #: .\vivatech_django\apps\home\models.py:10
+#, fuzzy
+#| msgid "Slider"
 msgid "Slide"
 msgstr "Слайд"
 
@@ -170,16 +176,12 @@ msgid "Link"
 msgstr "Сылка"
 
 #: .\vivatech_django\apps\home\models.py:25
-#, fuzzy
-#| msgid "Slide"
 msgid "Slider"
 msgstr "Слайд"
 
 #: .\vivatech_django\apps\home\models.py:26
-#, fuzzy
-#| msgid "Slides"
 msgid "Sliders"
-msgstr "Слайды"
+msgstr "Слайдеры"
 
 #: .\vivatech_django\apps\jobs\apps.py:7
 msgid "Jobs"

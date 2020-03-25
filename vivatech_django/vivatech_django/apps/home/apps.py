@@ -1,7 +1,7 @@
 from django.apps import AppConfig
-from django.utils.translation import gettext_lazy as gl
+from django.utils.translation import gettext_lazy as _
 
 
 class HomeConfig(AppConfig):
     name = 'home'
-    verbose_name = gl("Home")
+    verbose_name = _("Home")
