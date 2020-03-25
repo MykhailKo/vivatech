@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
+{% load i18n_switcher %}
 <html>
 <head>
 	<title>{% block title %}Vivatech |{% endblock %}</title>
@@ -42,23 +44,23 @@
 
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
-                                <li class="current-menu-item"><a href="{% url 'slider:home' %}">Главная</a></li>
-                                <li><a href="{% url 'catalog:main_category' %}">Каталог</a></li>
-                                <li><a href="{% url 'news:news_main' 1 %}">Новости</a></li>
-                                <li><a href="{% url 'about_page' %}">О нас</a></li>
-                                <li><a href="contact/">Контакты</a></li>
+                                <li class="current-menu-item"><a href="{% url 'slider:home' %}">{% trans 'Главная' %}</a></li>
+                                <li><a href="{% url 'catalog:main_category' %}">{% trans 'Каталог' %}</a></li>
+                                <li><a href="{% url 'news:news_main' 1 %}">{% trans 'Новости' %}</a></li>
+                                <li><a href="{% url 'about_jobs' %}">{% trans 'О нас' %}</a></li>
+                                <li><a href="contact/">{% trans 'Контакты' %}</a></li>
 
 
                                 <li class="call-btn button gradient-bg mt-3 mt-md-0">
                                     <a class="d-flex justify-content-center align-items-center" href="#"><img src="{% static 'images/emergency-call.png' %}"> +34 586 778 8892</a>
                                 </li>
                                 <div class="lang_menu">
-                                    <a href="#"><li class="lang_btn">RU</li></a>
-                                    <a href="#" class="lang_hide"><li class="lang_btn">UK</li></a>
-                                </div>
+                                    <a href="{{ request|switch_i18n:'ru' }}"><li class="lang_btn">RU</li></a>
+                                    <a href="{{ request|switch_i18n:'uk' }}" class="lang_hide"><li class="lang_btn">UK</li></a>
+                                </div><script src="" charset="utf-8"></script>
                             </ul>
                         </nav><!-- .site-navigation -->
-                        
+
                         <div class="hamburger-menu d-lg-none">
                             <span></span>
                             <span></span>
@@ -72,7 +74,7 @@
 
         <div class="swiper-container hero-slider">
             <div class="swiper-wrapper">
-                {% block slider %}{% endblock %}                        
+                {% block slider %}{% endblock %}
             </div>
             <div class="pagination-wrap position-absolute w-100">
                 <div class="swiper-pagination d-flex flex-row flex-md-column"></div>
@@ -87,7 +89,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="our-departments-wrap">
-                        <h2>Наши направления</h2>
+                        <h2>{% trans 'Наши направления' %}</h2>
 
                         <div class="row">
                             <div class="col-12 col-md-6 col-lg-4">
@@ -95,7 +97,7 @@
                                     <header class="entry-header d-flex flex-wrap align-items-center">
                                         <img src="{% static 'images/cardiogram.png' %}" alt="">
 
-                                        <h3>Cardioology</h3>
+                                        <h3>{% trans 'Cardioology' %}</h3>
                                     </header>
 
                                     <div class="entry-content">
@@ -265,7 +267,70 @@
                     <h2>Новости</h2>
 
                     <div class="row">
-                       {% block news %}{% endblock %}
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="the-news-wrap">
+                                <figure class="post-thumbnail">
+                                    <a href="#"><img src="static/images/news-1.png" alt=""></a>
+                                </figure>
+
+                                <header class="entry-header">
+                                    <h3>The latest in Medicine</h3>
+
+                                    <div class="post-metas d-flex flex-wrap align-items-center">
+                                        <div class="posted-date"><label>Date: </label><a href="#">April 12, 2018</a></div>
+
+                                        <div class="post-comments"><a href="#">2 Comments</a></div>
+                                    </div>
+                                </header>
+
+                                <div class="entry-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="the-news-wrap">
+                                <figure class="post-thumbnail">
+                                    <a href="#"><img src="static/images/news-2.png" alt=""></a>
+                                </figure>
+
+                                <header class="entry-header">
+                                    <h3>All you need to know about pills</h3>
+
+                                    <div class="post-metas d-flex flex-wrap align-items-center">
+                                        <div class="posted-date"><label>Date: </label><a href="#">April 12, 2018</a></div>
+
+                                        <div class="post-comments"><a href="#">2 Comments</a></div>
+                                    </div>
+                                </header>
+
+                                <div class="entry-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="the-news-wrap">
+                                <figure class="post-thumbnail">
+                                    <a href="#"><img src="static/images/news-3.png" alt=""></a>
+                                </figure>
+
+                                <header class="entry-header">
+                                    <h3>Marketing and Medicine</h3>
+
+                                    <div class="post-metas d-flex flex-wrap align-items-center">
+                                        <div class="posted-date"><label>Date: </label><a href="#">April 12, 2018</a></div>
+                                        <div class="post-comments"><a href="#">2 Comments</a></div>
+                                    </div>
+                                </header>
+
+                                <div class="entry-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -273,7 +338,7 @@
     </div>
 
 
-    
+
     <div class="subscribe-banner">
         <div class="container">
             <div class="row">
@@ -324,7 +389,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <ul class="p-0 m-0">
                                 <li><a href="{% url 'slider:home' %}">Главная</a></li>
                                 <li><a href="{% url 'catalog:main_category' %}">Каталог</a></li>
-                                <li><a href="{% url 'about_page' %}">О нас</a></li>
+                                <li><a href="{% url 'about_jobs' %}">О нас</a></li>
                                 <li><a href="contact/">Контакты</a></li>
                                 <li><a href="{% url 'news:news_main' 1 %}">Новости</a></li>
                                 <li><a href="#">Facebook</a></li>

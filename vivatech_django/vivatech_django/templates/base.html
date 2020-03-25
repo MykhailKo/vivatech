@@ -46,7 +46,7 @@
                                 <li class="current-menu-item"><a href="{% url 'slider:home' %}">Главная</a></li>
                                 <li><a href="{% url 'catalog:main_category' %}">Каталог</a></li>
                                 <li><a href="{% url 'news:news_main' 1 %}">Новости</a></li>
-                                <li><a href="{% url 'about_page' %}">О нас</a></li>
+                                <li><a href="{% url 'about_jobs' %}">О нас</a></li>
                                 <li><a href="contact/">Контакты</a></li>
 
                                 <li class="call-btn button gradient-bg mt-3 mt-md-0">
@@ -89,7 +89,7 @@
     </header><!-- .site-header -->
 
     {% block main %}{% endblock %}
-    
+
     <div class="subscribe-banner">
         <div class="container">
             <div class="row">
@@ -97,7 +97,8 @@
                     <h2>У Вас есть вопросы? Оставьте свой email и мы с Вами свяжемся.</h2>
 
                     <form>
-                        <input type="email" placeholder="E-mail address">
+						{% csrf_token %}
+                        <input type="email" placeholder="E-mail address" name="email">
                         <input class="button gradient-bg" type="submit" value="Отправить">
                     </form>
                 </div>
@@ -140,7 +141,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <ul class="p-0 m-0">
                                 <li><a href="{% url 'slider:home' %}">Главная</a></li>
                                 <li><a href="{% url 'catalog:main_category' %}">Каталог</a></li>
-                                <li><a href="{% url 'about_page' %}">О нас</a></li>
+                                <li><a href="{% url 'about_jobs' %}">О нас</a></li>
                                 <li><a href="contact/">Контакты</a></li>
                                 <li><a href="{% url 'news:news_main' 1 %}">Новости</a></li>
                                 <li><a href="#">Facebook</a></li>

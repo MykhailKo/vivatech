@@ -10,4 +10,3 @@ def about_page(request):
     brands = Brand.objects.all()
     services = Service.objects.all()
     return render(request, 'about/about.html', {'brands': brands, 'jobs': jobs, 'services': services})
-

@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-25 15:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\vivatech_django\apps\catalog\apps.py:7
+msgid "Catalog"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:7
+msgid "Name of your category"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:7
+#: .\vivatech_django\apps\catalog\models.py:19
+#: .\vivatech_django\apps\news\models.py:8
+msgid "name"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:8
+msgid "icon"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:14
+#: .\vivatech_django\apps\news\models.py:14
+msgid "Category"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:15
+#: .\vivatech_django\apps\news\models.py:15
+msgid "Categories"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:19
+msgid "Name of your sub category"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:20
+msgid "category"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:26
+msgid "Sub category"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:27
+msgid "Sub categories"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:31
+msgid "sub category"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:32
+#: .\vivatech_django\apps\news\models.py:22
+msgid "preview image"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:33
+msgid "Name of your model"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:33
+msgid "Model name"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:34
+msgid "Producer name"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:34
+msgid "producer"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:35
+msgid "producer logo"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:36
+msgid "Country of manufacture"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:36
+msgid "country"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:37
+#: .\vivatech_django\apps\news\models.py:21
+msgid "date published"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:38
+msgid "description"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:39
+msgid "characteristics"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:45
+msgid "Item"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:46
+msgid "Items"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:51
+msgid "author name"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:52
+msgid "comment"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:53
+msgid "data published"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:59
+msgid "Review"
+msgstr ""
+
+#: .\vivatech_django\apps\catalog\models.py:60
+msgid "Reviews"
+msgstr ""
+
+#: .\vivatech_django\apps\home\apps.py:7
+msgid "Home"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:7
+#: .\vivatech_django\apps\home\models.py:16
+msgid "title"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:10
+msgid "Slide"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:11
+msgid "Slides"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:15
+msgid "Backeground image"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:17
+#: .\vivatech_django\apps\news\models.py:23
+msgid "text"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:18
+msgid "Link"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:25
+msgid "Slider"
+msgstr ""
+
+#: .\vivatech_django\apps\home\models.py:26
+msgid "Sliders"
+msgstr ""
+
+#: .\vivatech_django\apps\jobs\apps.py:7
+msgid "Jobs"
+msgstr ""
+
+#: .\vivatech_django\apps\jobs\views.py:7
+msgid "Hello jobs! Jobs application view for about page."
+msgstr ""
+
+#: .\vivatech_django\apps\news\apps.py:7
+#: .\vivatech_django\apps\news\models.py:33
+#: .\vivatech_django\apps\news\models.py:34
+msgid "News"
+msgstr ""
+
+#: .\vivatech_django\apps\news\models.py:19
+msgid "news"
+msgstr ""
+
+#: .\vivatech_django\settings.py:118
+msgid "English"
+msgstr ""
+
+#: .\vivatech_django\settings.py:119
+msgid "Russian"
+msgstr ""
+
+#: .\vivatech_django\settings.py:120
+msgid "Ukrainian"
+msgstr ""
+
+#: .\vivatech_django\templates\admin\base_site.html:27
+msgid "Documentation"
+msgstr ""
+
+#: .\vivatech_django\templates\admin\base_site.html:31
+msgid "Change password"
+msgstr ""
+
+#: .\vivatech_django\templates\admin\base_site.html:33
+msgid "Log out"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:47
+msgid "Главная"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:48
+msgid "Каталог"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:49
+msgid "Новости"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:50
+msgid "О нас"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:51
+msgid "Контакты"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:92
+msgid "Наши направления"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:100
+msgid "Cardioology"
+msgstr ""
