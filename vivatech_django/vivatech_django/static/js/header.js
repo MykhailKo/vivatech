@@ -1,6 +1,10 @@
 jQuery(document).ready(function(){
 	// Language menu switcher
-	jQuery('.lang_menu').on('click', function(event){
+	let lang = localStorage.getItem('lang') != null ? localStorage.getItem('lang') : 'ru';
+	jQuery(`#${lang}`).addClass('lang_hide');
+	
+	jQuery('.lang_menu a').on('click', function(event){
+		localStorage.setItem('lang', jQuery(this).attr('id'));
 		jQuery('.lang_menu a').toggleClass('lang_hide');	
 	});
 

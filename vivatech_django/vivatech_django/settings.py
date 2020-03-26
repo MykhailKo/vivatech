@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'vivatech_django.apps.i18n_switcher.apps.I18nSwitcher',
+    'vivatech_django.apps.jobs.apps.JobsConfig',
     'vivatech_django.apps.news.apps.NewsConfig',
     'vivatech_django.apps.home.apps.HomeConfig',
     'vivatech_django.apps.catalog.apps.CatalogConfig',

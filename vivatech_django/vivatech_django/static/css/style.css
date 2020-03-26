@@ -272,11 +272,14 @@ a:hover, a:active {
 }
 .lang_menu a {
     color: #fff;
+    width: inherit;
+    height: inherit;
     text-decoration: none;
 }
 .lang_btn {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin-left: 0 !important;
     margin-right: 0 !important;
 }

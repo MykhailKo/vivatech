@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../locale/.idea/locale.iml" filepath="$PROJECT_DIR$/../locale/.idea/locale.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vivatech_django.iml" filepath="$PROJECT_DIR$/.idea/vivatech_django.iml" />
     </modules>
   </component>

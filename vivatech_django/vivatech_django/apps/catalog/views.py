@@ -18,7 +18,7 @@ def sub_category_list(request, sub_cat_name):
 
 def item_detail(request, sub_cat_name, item_model):
     item = get_object_or_404(Item, model=item_model)
-    reviews = item.review_set.order_by('pub_date')
+    reviews = item.review_set.order_by('-pub_date')
     return render(request, 'catalog/item.html', {"item" : item, "reviews" : reviews, "sub_cat_name" : sub_cat_name})
 
 

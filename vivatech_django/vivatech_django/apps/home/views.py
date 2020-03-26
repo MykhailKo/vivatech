@@ -4,11 +4,13 @@ from django.core import mail
 from django.urls import reverse
 from .models import Slide
 from .models import Slider
+from news.models import News
 
 
-def home_slider(request):
+def home_slides_news(request):
     slides = Slider.objects.all()
-    return render(request, 'slide/slide.html', {'slides' : slides})
+    news = News.objects.all().order_by('-pub_date')[0:3]
+    return render(request, 'home/slides_news.html', {'slides': slides, 'news': news})
 
 
 def sending_mail(request):
