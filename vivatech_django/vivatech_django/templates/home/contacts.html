@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load i18n_switcher %}
+{% block title %}Vivatech | Контакты{% endblock %}
+{% block page_title %}Контакты{% endblock %}
+{% block breadcrums %}
+<li><a href="{% url 'home:contacts_page' %}">Контакты</a></li>
+{% endblock %}
+{% block header_img %}<img class="header-img" src="{% static 'images/contact-bg.png' %}" alt="">{% endblock %}
+
+{% block main %}
+	<div class="contact-page-short-boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="contact-info h-100">
+                        <h2 class="d-flex align-items-center">Котактная информация</h2>
+
+                        <ul class="p-0 m-0">
+                            <li><span>Адрес:</span>Mitlton Str. 26-27 London UK</li>
+                            <li><span>Телефон:</span>+53 345 7953 32453</li>
+                            <li><span>Email:</span>yourmail@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-8 mt-5 mt-lg-0">
+                    <div class="opening-hours h-100">
+                        <h2 class="d-flex align-items-center">Карта</h2>
+
+                        <div class="contact-page-map">
+                             <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=university of san francisco&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div><!-- map -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <form class="contact-form" method="POST" action="{% url 'home:contacts_send_mail' %}">
+    	{% csrf_token %}
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Связаться с нами</h2>
+                </div>
+
+                <div class="col-12  col-md-4">
+                    <input type="text" placeholder="Имя" name="full_name">
+                </div><!-- col-4 -->
+
+                <div class="col-12 col-md-4">
+                    <input type="email" placeholder="E-mail" name="email">
+                </div><!-- col-6 -->
+
+                <div class="col-12 col-md-4">
+                    <input type="text" placeholder="Тема" name="subject">
+                </div>
+
+                <div class="col-12">
+                    <textarea name="text" rows="12" cols="80" placeholder="Сообщение"></textarea>
+                </div>
+
+                <div class="col-12">
+                    <input type="submit" name="" value="Отправить сообщение" class="button gradient-bg">
+                </div>
+            </div><!-- row -->
+        </div>
+    </form><!-- contact-form -->
+
+{% endblock %}

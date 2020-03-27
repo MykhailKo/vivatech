@@ -12,7 +12,7 @@
 	width: 90vw;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 5vh;
+	margin-top: 0;
 	margin-bottom: 10vh;
 	display: flex;
 	flex-flow: row wrap;
@@ -36,6 +36,7 @@
 	height: 3em;
 	align-items: center;
 	padding-left: 0.5em;
+	border-bottom: 0.1vh solid #fff;
 }
 .cat_title {
 	font-family: 'Nunito';

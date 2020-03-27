@@ -69,8 +69,30 @@ a:hover, a:active {
     left: 0;
     z-index: 9999;
     width: 100%;
-    padding: 20px 0;
+    padding: 0 0;
     transition: 0.5s all;
+}
+
+.fb_btn {
+	display: flex;
+	align-items: center;
+	width: 40px;
+	height: 100%;
+	position: absolute;
+	right: -60px;
+	top: 2px;
+}
+
+@media screen and (max-width: 576px) {
+	.fb_btn {
+		right: 40vw;
+		top: 2px;
+	}
+}
+
+.fb_btn i {
+	color: #f1889a;
+	font-size: 40px;
 }
 
 /*
@@ -91,7 +113,12 @@ a:hover, a:active {
     }
 }
 .d-block {
-    max-width: 12vw;
+    max-width: 14vw;
+}
+@media screen and (max-width: 576px) {
+	.d-block {
+		max-width: 30vw;
+	}
 }
 
 /*
@@ -302,15 +329,37 @@ a:hover, a:active {
     min-height: 700px;
     position: relative;
     color: #fff;
-
     background-size: cover;
     background-position: center;
+}
+
+.swiper_bg {
+	min-height: 700px;
+	width: 100%;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+.swiper_image {
+	min-height: 700px;
+	width: 60%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
 }
 
 .hero-content-overlay {
     top: 0;
     left: 0;
     background: rgba(0,0,0,0);
+    z-index: 11;
 }
 
 .hero-content-overlay h1 {
@@ -1146,7 +1195,7 @@ ul.tabs-nav .tab-nav.active {
 --------------------------------------------------------------*/
 .single-page .site-header {
     position: relative;
-    padding: 180px 0 100px;
+    padding: 160px 0 50px;
     background-color: #f0f4f8;
 }
 
@@ -1166,7 +1215,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .header-img {
-    max-width: 50% !important;
+    max-width: 40% !important;
 }
 
 /*--------------------------------------------------------------

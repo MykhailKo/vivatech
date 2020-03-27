@@ -26,7 +26,7 @@ from news import views
 
 urlpatterns = i18n_patterns(
     path('', include('home.urls', namespace='index')),
-    path('home/', include('home.urls',  namespace='slider')),
+    path('home/', include('home.urls',  namespace='home')),
     path('news/', include('news.urls', namespace='news')),
     path('about/', include('jobs.urls')),
     path('catalog/', include('catalog.urls', namespace='catalog')),
