@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-25 15:56+0200\n"
+"POT-Creation-Date: 2020-03-28 08:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,7 +148,7 @@ msgid "Home"
 msgstr "Домашня сторінка"
 
 #: .\vivatech_django\apps\home\models.py:7
-#: .\vivatech_django\apps\home\models.py:16
+#: .\vivatech_django\apps\home\models.py:22
 msgid "title"
 msgstr "назва"
 
@@ -160,34 +160,97 @@ msgstr "Слайд"
 msgid "Slides"
 msgstr "Слайди"
 
-#: .\vivatech_django\apps\home\models.py:15
+#: .\vivatech_django\apps\home\models.py:21
 msgid "Backeground image"
 msgstr "Фонове зображення"
 
-#: .\vivatech_django\apps\home\models.py:17
+#: .\vivatech_django\apps\home\models.py:23
 #: .\vivatech_django\apps\news\models.py:23
 msgid "text"
 msgstr "текст"
 
-#: .\vivatech_django\apps\home\models.py:18
+#: .\vivatech_django\apps\home\models.py:24
 msgid "Link"
 msgstr "Посилання"
 
-#: .\vivatech_django\apps\home\models.py:25
+#: .\vivatech_django\apps\home\models.py:31
 msgid "Slider"
 msgstr "Слайдер"
 
-#: .\vivatech_django\apps\home\models.py:26
+#: .\vivatech_django\apps\home\models.py:32
 msgid "Sliders"
 msgstr "Слайдери"
 
 #: .\vivatech_django\apps\jobs\apps.py:7
+#: .\vivatech_django\apps\jobs\models.py:18
 msgid "Jobs"
 msgstr "Вакансії"
 
-#: .\vivatech_django\apps\jobs\views.py:7
-msgid "Hello jobs! Jobs application view for about page."
-msgstr ""
+#: .\vivatech_django\apps\jobs\models.py:7
+#, fuzzy
+#| msgid "description"
+msgid "Position"
+msgstr "опис"
+
+#: .\vivatech_django\apps\jobs\models.py:8
+msgid "Requirements"
+msgstr "Вимоги"
+
+#: .\vivatech_django\apps\jobs\models.py:9
+msgid "Responsibilities"
+msgstr "Обов’язки"
+
+#: .\vivatech_django\apps\jobs\models.py:10
+msgid "Conditions"
+msgstr "Умови"
+
+#: .\vivatech_django\apps\jobs\models.py:17
+msgid "Job"
+msgstr "Вакансія"
+
+#: .\vivatech_django\apps\jobs\models.py:22
+msgid "Name"
+msgstr "Ім'я"
+
+#: .\vivatech_django\apps\jobs\models.py:23
+msgid "Country"
+msgstr "Країна"
+
+#: .\vivatech_django\apps\jobs\models.py:24
+msgid "Brand website"
+msgstr "Веб-сайт бренду"
+
+#: .\vivatech_django\apps\jobs\models.py:25
+msgid "Logo"
+msgstr "Логотип"
+
+#: .\vivatech_django\apps\jobs\models.py:31
+msgid "Brand"
+msgstr "Бренд"
+
+#: .\vivatech_django\apps\jobs\models.py:32
+msgid "Brands"
+msgstr "Бренди"
+
+#: .\vivatech_django\apps\jobs\models.py:36
+msgid "Title"
+msgstr "Назва"
+
+#: .\vivatech_django\apps\jobs\models.py:37
+msgid "Icon"
+msgstr "Іконка"
+
+#: .\vivatech_django\apps\jobs\models.py:38
+msgid "Text"
+msgstr "Текст"
+
+#: .\vivatech_django\apps\jobs\models.py:44
+msgid "Service"
+msgstr "Сервіс"
+
+#: .\vivatech_django\apps\jobs\models.py:45
+msgid "Services"
+msgstr "Сервіси"
 
 #: .\vivatech_django\apps\news\apps.py:7
 #: .\vivatech_django\apps\news\models.py:33
@@ -199,15 +262,15 @@ msgstr "Новини"
 msgid "news"
 msgstr "новини"
 
-#: .\vivatech_django\settings.py:118
+#: .\vivatech_django\settings.py:119
 msgid "English"
 msgstr "Англійська"
 
-#: .\vivatech_django\settings.py:119
+#: .\vivatech_django\settings.py:120
 msgid "Russian"
 msgstr "російський"
 
-#: .\vivatech_django\settings.py:120
+#: .\vivatech_django\settings.py:121
 msgid "Ukrainian"
 msgstr "Українська"
 
@@ -223,30 +286,35 @@ msgstr "Змінити пароль"
 msgid "Log out"
 msgstr "Вийти"
 
+#: .\vivatech_django\templates\base.html:48
 #: .\vivatech_django\templates\home.html:47
 msgid "Главная"
 msgstr "Головна"
 
+#: .\vivatech_django\templates\base.html:49
 #: .\vivatech_django\templates\home.html:48
 msgid "Каталог"
 msgstr "Каталог"
 
+#: .\vivatech_django\templates\base.html:50
 #: .\vivatech_django\templates\home.html:49
 msgid "Новости"
 msgstr "Новини"
 
+#: .\vivatech_django\templates\base.html:51
 #: .\vivatech_django\templates\home.html:50
 msgid "О нас"
 msgstr "Про нас"
 
+#: .\vivatech_django\templates\base.html:52
 #: .\vivatech_django\templates\home.html:51
 msgid "Контакты"
 msgstr "Контакти"
 
-#: .\vivatech_django\templates\home.html:92
+#: .\vivatech_django\templates\home.html:96
 msgid "Наши направления"
 msgstr "Наші напрямки"
 
-#: .\vivatech_django\templates\home.html:100
+#: .\vivatech_django\templates\home.html:104
 msgid "Cardioology"
 msgstr ""

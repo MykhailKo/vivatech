@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'vivatech_django.apps.news.apps.NewsConfig',
     'vivatech_django.apps.home.apps.HomeConfig',
     'vivatech_django.apps.catalog.apps.CatalogConfig',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -114,12 +115,21 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+gettext = lambda s: s
 LANGUAGES = [
-    ('en', _('English')),
     ('ru', _('Russian')),
+    ('en', _('English')),
     ('uk', _('Ukrainian'))
 ]
+MODELTRANSLATION_LANGUAGES = ('ru', 'uk')
+
+DEFAULT_LANGUAGE = 'ru'
+
+MODELTRANSLATION_TRANSLATION_FILES = (
+    'catalog.translation',
+)
+
+MODELTRANSLATION_DEBUG = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

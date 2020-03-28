@@ -11,12 +11,6 @@ class Slide(models.Model):
         verbose_name_plural = _("Slides")
 
 
-
-class Slide(models.Model):
-    bg_image = models.ImageField()#TBD
-    title = models.CharField(max_length=200)
-
-
 class Slider(models.Model):
     bg_image = models.ImageField(upload_to='slider', blank=True, verbose_name=_("Backeground image"))
     title = models.CharField(max_length = 80, verbose_name = _('title'))
