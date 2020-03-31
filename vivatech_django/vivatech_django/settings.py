@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_better_admin_arrayfield.apps.DjangoBetterAdminArrayfieldConfig',
     'vivatech_django.apps.i18n_switcher.apps.I18nSwitcher',
     'vivatech_django.apps.jobs.apps.JobsConfig',
     'vivatech_django.apps.news.apps.NewsConfig',

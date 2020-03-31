@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="498581fe-8848-48b5-b30e-12a8b454a9ee" name="Default Changelist" comment="" />
+    <list default="true" id="498581fe-8848-48b5-b30e-12a8b454a9ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vivatech_django/apps/catalog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/vivatech_django/apps/catalog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vivatech_django/apps/catalog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vivatech_django/apps/catalog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vivatech_django/apps/jobs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/vivatech_django/apps/jobs/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vivatech_django/apps/jobs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vivatech_django/apps/jobs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vivatech_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vivatech_django/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,18 +19,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vivatech_django.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-        <option value="$PROJECT_DIR$/.idea/.gitignore" />
-      </list>
-    </option>
   </component>
   <component name="ProjectId" id="1ZtCKJhnqF2KuP8NUdu1AmZAJtm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -58,7 +55,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
