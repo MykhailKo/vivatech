@@ -158,3 +158,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'vivatech_django/media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'vivatech_django/static'),
 ]
+
+
+# Sending Email
+
+EMAIL_HOST = ''
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''

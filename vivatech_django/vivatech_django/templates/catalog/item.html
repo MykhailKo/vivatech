@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% if item %}
 {% block title %}Vivatech | {{item.model}}{% endblock %}
 {% block styles %}
@@ -10,7 +11,7 @@
 {% endblock %}
 {% block page_title %}Каталог{% endblock %}
 {% block breadcrums %}
-<li><a href="{% url 'catalog:main_category'%}">Каталог</a></li>
+<li><a href="{% url 'catalog:main_category'%}">{% trans 'Каталог' %}</a></li>
 <li><a href="{% url 'catalog:sub_category_list' sub_cat_name %}">{{ sub_cat_name }}</a></li>
 <li><a href="{% url 'catalog:item_detail' sub_cat_name item.model %}">{{ item.model }}</a></li>
 {% endblock %}
@@ -22,9 +23,9 @@
            <div class="item_preview" style="background-image: url('{{item.preview_image.url}}')"></div>
            <div class="item_prop_wrap">
                <nav class="prop_menu">
-                   <li class="prop_menu_active" id="desc">Описание</li>
-                   <li id="char">Характеристики</li>
-                   <li id="reviews">Отзывы</li>
+                   <li class="prop_menu_active" id="desc">{% trans 'Описание' %}</li>
+                   <li id="char">{% trans 'Характеристики' %}</li>
+                   <li id="reviews">{% trans 'Отзывы' %}</li>
                </nav>
                <div class="item_prop">
                    <div class="prop_block desc">
@@ -32,7 +33,7 @@
                            <ul class="main_prop">
                                <li class="model">{{item.model}}</li>
                                <li class="producer">
-                                  <span class="char_title">Producer:</span>
+                                  <span class="char_title">{% trans 'Producer' %}:</span>
                                   <span class="char_cont">{{item.producer}}</span>
                                </li>
                                <li class="prod_country">
@@ -48,7 +49,7 @@
                    </div>
                    <div class="prop_block char">
                        <ul class="char_list">
-                           {% if item.characteristics %}
+                           {% if item.zcharacteristics %}
                                 {% for c in item.characteristics %}
                                     <li>{{c}}</li>
                                 {% endfor %}
@@ -56,12 +57,12 @@
                        </ul>
                    </div>
                    <div class="prop_block reviews">
-                        <span class="rev_title">Оставить отзыв</span>
-                       <form class="review_form" action="{% url 'catalog:leave_review' item.sub_category.name item.model %}" method="POST"> 
+                        <span class="rev_title">{% trans 'Оставить отзыв' %}</span>
+                       <form class="review_form" action="{% url 'catalog:leave_review' item.sub_category.name item.model %}" method="POST">
                             {% csrf_token %}
                            <input type="text" name="full_name" class="review_name" placeholder="Your name">
                            <textarea class="review_mes" name="text" placeholder="Your review" rows="3"></textarea>
-                           <button type="submit" class="button gradient-bg review_sub">Send</button>
+                           <button type="submit" class="button gradient-bg review_sub">{% trans 'Send' %}</button>
                        </form>
                        <ul class="reviews_list">
                             <span class="rev_title">Отзывы</span>

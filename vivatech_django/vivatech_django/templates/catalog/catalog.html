@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}Vivatech | Каталог{{ item.model }}{% endblock %}
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/categories.css' %}">
 {% endblock %}
-{% block page_title %}Каталог{% endblock %}
+{% block page_title %}{% trans 'Каталог' %}{% endblock %}
 {% block breadcrums %}
-<li><a href="{% url 'catalog:main_category' %}">Каталог</a></li>
+<li><a href="{% url 'catalog:main_category' %}">{% trans 'Каталог' %}</a></li>
 {% endblock %}
 {% block header_img %}<img class="header-img" src="{% static 'images/service-bg.png' %}" alt="">{% endblock %}
 

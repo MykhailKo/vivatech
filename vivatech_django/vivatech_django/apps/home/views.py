@@ -28,6 +28,5 @@ def contacts_send_mail(request):
     email = request.POST['email']
     subject = request.POST['subject']
     text = request.POST['text']
-    #mail.send_mail("vivatech.com: " + subject, text, "vivatech@mail.com", ["vivatech@mail.com", "tuareg1812@gmail.com"])
-    # return HttpResponse("<html><body>" + name + "<br>" + email + "<br>" + subject + "<br>" + text + "<br>" + "</body></html>")
+    mail.send_mail("vivatech.com: " + subject, text, "vivatech@mail.com", ["vivatech@mail.com", "tuareg1812@gmail.com"])
     return HttpResponseRedirect(reverse('home:contacts_page'))

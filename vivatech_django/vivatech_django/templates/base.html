@@ -83,7 +83,7 @@
 
                     <div class="breadcrumbs">
                         <ul class="d-flex flex-wrap align-items-center p-0 m-0">
-                            <li><a href="{% url 'slider:home' %}">Главная</a></li>
+                            <li><a href="{% url 'slider:home' %}">{% trans 'Главная' %}</a></li>
                             {% block breadcrums %}{% endblock %}
                         </ul>
                     </div><!-- .breadcrumbs -->
@@ -100,7 +100,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-8 offset-lg-2">
-                    <h2>У Вас есть вопросы? Оставьте свой email и мы с Вами свяжемся.</h2>
+                    <h2>{% trans 'У Вас есть вопросы? Оставьте свой email и мы с Вами свяжемся.' %}</h2>
 
                     <form>
 						{% csrf_token %}
@@ -133,8 +133,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2>Контакты</h2>
 
                             <ul class="p-0 m-0">
-                                <li><span>Адрес:</span>Mitlton Str. 26-27 London UK</li>
-                                <li><span>Телефон:</span>+53 345 7953 32453</li>
+								<li><span>{% trans 'Адрес' %}:</span>Mitlton Str. 26-27 London UK</li>
+                                <li><span>{% trans 'Телефон' %}:</span>+53 345 7953 32453</li>
                                 <li><span>Email:</span>yourmail@gmail.com</li>
                             </ul>
                         </div>
@@ -145,11 +145,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <h2>Полезные ссылки</h2>
 
                             <ul class="p-0 m-0">
-                                <li><a href="{% url 'home:home' %}">Главная</a></li>
-                                <li><a href="{% url 'catalog:main_category' %}">Каталог</a></li>
-                                <li><a href="{% url 'about_page' %}">О нас</a></li>
-                                <li><a href="{% url 'home:contacts_page' %}">Контакты</a></li>
-                                <li><a href="{% url 'news:news_main' 1 %}">Новости</a></li>
+                                <li><a href="{% url 'home:home' %}">{% trans 'Главная' %}</a></li>
+                                <li><a href="{% url 'catalog:main_category' %}">{% trans 'Каталог' %}</a></li>
+                                <li><a href="{% url 'about_page' %}">{% trans 'О нас' %}</a></li>
+                                <li><a href="{% url 'home:contacts_page' %}">{% trans 'Контакты' %}</a></li>
+                                <li><a href="{% url 'news:news_main' 1 %}">{% trans 'Новости' %}</a></li>
                                 <li><a href="#">Facebook</a></li>
                             </ul>
                         </div><!-- .foot-links -->

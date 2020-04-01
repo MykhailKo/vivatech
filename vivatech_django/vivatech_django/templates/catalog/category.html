@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}Vivatech | {{sub_cat_name}}{% endblock %}
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/catalog.css' %}">
 {% endblock %}
-{% block page_title %}Каталог{% endblock %}
+{% block page_title %}{% trans 'Каталог' %}{% endblock %}
 {% block breadcrums %}
-<li><a href="{% url 'catalog:main_category'%}">Каталог</a></li>
+<li><a href="{% url 'catalog:main_category'%}">{% trans 'Каталог' %}</a></li>
 <li><a href="{% url 'catalog:sub_category_list' sub_cat_name %}">{{ sub_cat_name }}</a></li>
 {% endblock %}
 {% block header_img %}<img class="header-img" src="{% static 'images/service-bg.png' %}" alt="">{% endblock %}

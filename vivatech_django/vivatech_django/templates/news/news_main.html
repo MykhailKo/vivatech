@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Vivatech | Новости{% endblock %}
-{% block page_title %}Новости{% endblock %}
+{% load i18n %}
+{% block title %}Vivatech | {% trans 'Новости' %}{% endblock %}
+{% block page_title %}{% trans 'Новости' %}{% endblock %}
 {% block breadcrums %}
-<li><a href="{% url 'news:news_main' 1 %}">Новости</a></li>
+<li><a href="{% url 'news:news_main' 1 %}">{% trans 'Новости' %}</a></li>
 {% endblock %}
 {% block header_img %}<img class="header-img" src="{% static 'images/news-bg.png' %}" alt="">{% endblock %}
 
@@ -25,8 +26,8 @@
                                         <h3>{{n.title}}</h3>
 
                                         <div class="post-metas d-flex flex-wrap align-items-center">
-                                            <div class="posted-date"><label>Дата: </label><a href="#">{{n.pub_date}}</a></div>
-                                            <div class="posted-date"><label>Категория: </label><a href="{% url 'news:ordered_by' n.category 1 %}">{{n.category}}</a></div>
+                                            <div class="posted-date"><label>{% trans 'Дата' %}: </label><a href="#">{{n.pub_date}}</a></div>
+                                            <div class="posted-date"><label>{% trans 'Категория' %}: </label><a href="{% url 'news:ordered_by' n.category 1 %}">{{n.category}}</a></div>
                                         </div>
                                     </header>
 
@@ -35,7 +36,7 @@
                                     </div>
 
                                     <footer class="entry-footer mt-5">
-                                        <a class="button gradient-bg" href="{% url 'news:news_detail' n.category cur_page n.title %}">Читать далее</a>
+                                        <a class="button gradient-bg" href="{% url 'news:news_detail' n.category cur_page n.title %}">{% trans 'Read More' %}</a>
                                     </footer>
                                 </div>
                             </div>
@@ -62,7 +63,7 @@
             <div class="col-12 col-lg-4">
                 <div class="sidebar">
                     <div class="sidebar-cats">
-                        <h2 class="widget-title">Категории</h2>
+                        <h2 class="widget-title">{% trans 'Категории' %}</h2>
 
                         <ul class="p-0 m-0">
                             {% if categories %}
@@ -70,12 +71,12 @@
                                     <li><a href="{% url 'news:ordered_by' cat.name 1 %}">{{cat.name}}</a></li>
                                 {% endfor %}
                             {% endif %}
-                                    <li><a href="{% url 'news:news_main' 1 %}">Все</a></li>
+                                    <li><a href="{% url 'news:news_main' 1 %}">{% trans 'Все' %}</a></li>
                         </ul>
                     </div>
-                
+
                     <div class="popular-posts">
-                        <h2 class="widget-title">Последние новости</h2>
+                        <h2 class="widget-title">{% trans 'Последние новости' %}</h2>
 
                         <ul class="p-0 m-0">
                             {% if news %}

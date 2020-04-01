@@ -2,10 +2,10 @@
 {% load static %}
 {% load i18n %}
 {% load i18n_switcher %}
-{% block title %}Vivatech | Контакты{% endblock %}
-{% block page_title %}Контакты{% endblock %}
+{% block title %}Vivatech | {% trans 'Контакты' %}{% endblock %}
+{% block page_title %}{% trans 'Контакты' %}{% endblock %}
 {% block breadcrums %}
-<li><a href="{% url 'home:contacts_page' %}">Контакты</a></li>
+<li><a href="{% url 'home:contacts_page' %}">{% trans 'Контакты' %}</a></li>
 {% endblock %}
 {% block header_img %}<img class="header-img" src="{% static 'images/contact-bg.png' %}" alt="">{% endblock %}
 
@@ -15,11 +15,11 @@
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="contact-info h-100">
-                        <h2 class="d-flex align-items-center">Котактная информация</h2>
+                        <h2 class="d-flex align-items-center">{% trans 'Котактная информация' %}</h2>
 
                         <ul class="p-0 m-0">
-                            <li><span>Адрес:</span>Mitlton Str. 26-27 London UK</li>
-                            <li><span>Телефон:</span>+53 345 7953 32453</li>
+							<li><span>{% trans 'Адрес' %}:</span>Mitlton Str. 26-27 London UK</li>
+							<li><span>{% trans 'Телефон' %}:</span>+53 345 7953 32453</li>
                             <li><span>Email:</span>yourmail@gmail.com</li>
                         </ul>
                     </div>
@@ -27,7 +27,7 @@
 
                 <div class="col-12 col-md-8 mt-5 mt-lg-0">
                     <div class="opening-hours h-100">
-                        <h2 class="d-flex align-items-center">Карта</h2>
+                        <h2 class="d-flex align-items-center">{% trans 'Карта' %}</h2>
 
                         <div class="contact-page-map">
                              <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=university of san francisco&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Связаться с нами</h2>
+                    <h2>{% trans 'Связаться с нами' %}</h2>
                 </div>
 
                 <div class="col-12  col-md-4">

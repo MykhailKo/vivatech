@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}Vivatech | О нас{% endblock %}
 {% block page_title %}О нас{% endblock %}
 {% block breadcrums %}
@@ -12,7 +13,7 @@
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-12 col-lg-6">
-                    <h2>Виватек история</h2>
+                    <h2>{% trans 'Виватек история' %}</h2>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Curabitur ut augue finibus, luctus tortor at, ornare erat. Nulla facilisi. Sed est risus, laoreet et quam non, viverra accumsan leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Curabitur ut augue finibus, luctus tortor at, ornare erat. </p>
             </div>
@@ -27,14 +28,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4 mt-6 mt-lg-5">
-                    <h2>Вакансии</h2>
+                    <h2>{% trans 'Вакансии' %}</h2>
                 </div>
 
                  <div class="col-12 col-lg-8 mt-6 mt-lg-0">
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="professional-box">
-                                <h2 class="d-flex align-items-center">Профессионализм</h2>
+                                <h2 class="d-flex align-items-center">{% trans 'Профессионализм' %}</h2>
 
                                 <img src="{% static 'images/cardiogram-2.png' %}" alt="">
 
@@ -44,7 +45,7 @@
 
                         <div class="col-12 col-md-6">
                             <div class="quality-box">
-                                <h2 class="d-flex align-items-center">Качество</h2>
+                                <h2 class="d-flex align-items-center">{% trans 'Качество' %}</h2>
 
                                 <img src="{% static 'images/hospital.png' %}" alt="">
 
@@ -62,21 +63,21 @@
 
 	                        <div class="entry-content">
 	                            <div class="job_block">
-	                                <ul class="job_req">	                    
-	                                    <span class="job_title">Требования</span>
+	                                <ul class="job_req">
+	                                    <span class="job_title">{% trans 'Требования' %}</span>
 	                                    {% for r in job.requirements %}
 	                                    	<li>{{r}}</li>
 	                                   	{% endfor %}
 	                                </ul>
 	                                <ul class="job_resp">
-	                                    <span class="job_title">Обязанности</span>
-	                                    {% for res in job.responsibilities %} 
+	                                    <span class="job_title">{% trans 'Обязанности' %}</span>
+	                                    {% for res in job.responsibilities %}
 	                                    	<li>{{res}}</li>
 	                                    {% endfor %}
 	                                </ul>
 	                                <ul class="job_prep">
-	                                    <span class="job_title">Мы предлагаем</span>
-	                                    {% for res in job.conditions %} 
+	                                    <span class="job_title">{% trans 'Мы предлагаем' %}</span>
+	                                    {% for res in job.conditions %}
 	                                    	<li>{{res}}</li>
 	                                    {% endfor %}
 	                                </ul>
@@ -84,7 +85,7 @@
 	                        </div>
                         	{% endfor %}
                      	{% endif %}
-                      
+
                 </div>
             </div>
         </div>
@@ -95,7 +96,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Наши партнеры</h2>
+                    <h2>{% trans 'Наши партнеры' %}</h2>
                 </div>
                 {% if brands %}
                 	{% for brand in brands %}
@@ -117,7 +118,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Сервисное обслуживание</h2>
+                    <h2>{% trans 'Сервисное обслуживание' %}</h2>
                     <div class="col-12 col-lg-12 mb-5 mb-lg-0">
                     <div class="accordion-wrap type-accordion">
                     	{% if services %}
@@ -136,7 +137,7 @@
 	                        </div>
                         	{% endfor %}
                         {% endif %}
-                        
+
                     </div>
                 </div>
                 </div>
