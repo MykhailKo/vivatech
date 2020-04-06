@@ -286,9 +286,10 @@
                 <div class="col-12 col-lg-8 offset-lg-2">
                     <h2>{% trans 'У Вас есть вопросы? Оставьте свой email и мы с Вами свяжемся.' %}</h2>
 
-                    <form>
-                        <input type="email" placeholder="E-mail address">
-                        <input class="button gradient-bg" type="submit" value="Отправить">
+                    <form method="POST" action="{% url 'home:sending_mail' %}">
+                        {% csrf_token %}
+                        <input id="footer_email" type="email" placeholder="E-mail address" name="footer_email">
+                        <input id="footer_form_btn" class="button gradient-bg" type="submit" value="{% trans 'Отправить' %}">
                     </form>
                 </div>
             </div>
@@ -301,7 +302,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 first_col">
                         <div class="foot-about">
-                            <h2><a href="#"><img src="{% static 'images/logo.png' %}" alt=""></a></h2>
+                            <h2><a href="#"><img src="{% static 'images/logo.png' %}" alt="" style="max-width: 20vw"></a></h2>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien.</p>
 

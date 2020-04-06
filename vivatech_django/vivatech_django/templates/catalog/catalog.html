@@ -26,7 +26,7 @@
 	   			<ul class="sub_cat_list">
 	   				{% for sub in sub_categories %}
 	            		{% if sub.category == cat %}
-		   					<a href="{% url 'catalog:sub_category_list' sub.name %}"><li class="sub_cat">{{sub.name}}</li></a>
+		   					<a href="{% url 'catalog:sub_category_list' sub.name 'new' %}"><li class="sub_cat">{{sub.name}}</li></a>
 		   				{% endif %}
 	        		{% endfor %}
 	   			</ul>
@@ -35,13 +35,4 @@
 		{% endif %}
    	</main>
 {% endblock %}
-{% if categories and sub_categories %}
-    {% for cat in categories %}
-        <li>{{ cat.name }}</li>
-        {% for sub in sub_categories %}
-            {% if sub.category == cat %}
-                <li><a href="{% url 'catalog:sub_category_list' sub.name %}">{{sub.name}}</a></li>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-{% endif %}
+

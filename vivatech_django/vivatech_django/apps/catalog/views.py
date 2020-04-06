@@ -11,18 +11,22 @@ def main_categories(request):
     return render(request, 'catalog/catalog.html', {'categories' : categories, 'sub_categories' : sub_categories})
 
 
-def sub_category_list(request, sub_cat_name):
+def sub_category_list(request, sub_cat_name, sort):
     items = Item.objects.filter(sub_category__name = sub_cat_name)
-    return render(request, 'catalog/category.html', {'items' : items, 'sub_cat_name' : sub_cat_name})
+    if sort == 'A-Z': items.order_by('model')
+    elif sort == 'Z-A': items.order_by('-model')
+    elif sort == 'new': items.order_by('pub_date')
+    elif sort == 'old': items.order_by('-pub_date')
+    return render(request, 'catalog/category.html', {'items': items, 'sub_cat_name': sub_cat_name, 'sort': sort})
 
 
-def item_detail(request, sub_cat_name, item_model):
+def item_detail(request, sub_cat_name, sort, item_model):
     item = get_object_or_404(Item, model=item_model)
     reviews = item.review_set.order_by('-pub_date')
-    return render(request, 'catalog/item.html', {"item" : item, "reviews" : reviews, "sub_cat_name" : sub_cat_name})
+    return render(request, 'catalog/item.html', {"item": item, "reviews": reviews, "sub_cat_name": sub_cat_name, 'sort': sort})
 
 
-def leave_review(request, sub_cat_name, item_model):
+def leave_review(request, sub_cat_name, sort, item_model):
     item = get_object_or_404(Item, model = item_model)
     item.review_set.create(autor = request.POST['full_name'], text = request.POST['text'], pub_date = timezone.now(), item_id = item)
-    return HttpResponseRedirect(reverse('catalog:item_detail', args = (item.sub_category.name, item.model)))
+    return HttpResponseRedirect(reverse('catalog:item_detail', args = (item.sub_category.name, sort, item.model)))

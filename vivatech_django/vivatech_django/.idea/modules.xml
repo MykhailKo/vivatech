@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../locale/.idea/locale.iml" filepath="$PROJECT_DIR$/../locale/.idea/locale.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/srm-lab-07/.idea/srm-lab-07.iml" filepath="$USER_HOME$/PycharmProjects/srm-lab-07/.idea/srm-lab-07.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/ta-lab-5/.idea/ta-lab-5.iml" filepath="$USER_HOME$/PycharmProjects/ta-lab-5/.idea/ta-lab-5.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vivatech_django.iml" filepath="$PROJECT_DIR$/.idea/vivatech_django.iml" />
     </modules>
   </component>

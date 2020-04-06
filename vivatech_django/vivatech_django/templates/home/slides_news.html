@@ -18,10 +18,11 @@
                                     <div class="entry-content mt-4">
                                         <p>{{slide.text}}</p>
                                     </div><!-- .entry-content -->
-
+                                    {% if slide.btn_link != 'http://127.0.0.1:8000/ru/' %}
                                     <footer class="entry-footer d-flex flex-wrap align-items-center mt-4">
                                         <a href="{{slide.btn_link}}" target="_blank" class="button gradient-bg">{% trans 'Read More' %}</a>
                                     </footer><!-- .entry-footer -->
+                                    {% endif %}
                                 </div><!-- .col -->
                             </div><!-- .row -->
                         </div><!-- .container -->

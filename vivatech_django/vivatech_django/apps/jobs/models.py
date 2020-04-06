@@ -1,13 +1,16 @@
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
+from django_better_admin_arrayfield.models.fields import ArrayField
 from django.utils.translation import gettext_lazy as _
 
 
 class Job(models.Model):
     position = models.CharField(max_length=300, verbose_name=_("Position"))
-    requirements = ArrayField(models.CharField(max_length=500, verbose_name=_("Requirements")))
-    responsibilities = ArrayField(models.CharField(max_length=500, verbose_name=_("Responsibilities")))
-    conditions = ArrayField(models.CharField(max_length=500, verbose_name=_("Conditions")))
+    requirements_ru = ArrayField(models.CharField(max_length=500, verbose_name=_("Requirements")), default=list)
+    requirements_uk = ArrayField(models.CharField(max_length=500, verbose_name=_("Requirements")), default=list)
+    responsibilities_ru = ArrayField(models.CharField(max_length=500, verbose_name=_("Responsibilities")), default=list)
+    responsibilities_uk = ArrayField(models.CharField(max_length=500, verbose_name=_("Responsibilities")), default=list)
+    conditions_ru = ArrayField(models.CharField(max_length=500, verbose_name=_("Conditions")), default=list)
+    conditions_uk = ArrayField(models.CharField(max_length=500, verbose_name=_("Conditions")), default=list)
     priority = models.IntegerField()
 
     def __str__(self):

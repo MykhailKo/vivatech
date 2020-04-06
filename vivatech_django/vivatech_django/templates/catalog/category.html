@@ -5,10 +5,13 @@
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/catalog.css' %}">
 {% endblock %}
+{% block js %}
+<script type='text/javascript' src="{% static 'js/sort_block.js' %}"></script>
+{% endblock %}
 {% block page_title %}{% trans 'Каталог' %}{% endblock %}
 {% block breadcrums %}
 <li><a href="{% url 'catalog:main_category'%}">{% trans 'Каталог' %}</a></li>
-<li><a href="{% url 'catalog:sub_category_list' sub_cat_name %}">{{ sub_cat_name }}</a></li>
+<li><a href="{% url 'catalog:sub_category_list' sub_cat_name sort %}">{{ sub_cat_name }}</a></li>
 {% endblock %}
 {% block header_img %}<img class="header-img" src="{% static 'images/service-bg.png' %}" alt="">{% endblock %}
 
@@ -18,36 +21,48 @@
         <div class="catalog_header">
             <div class="category_title">{{ sub_cat_name }}</div>
             <div class="sorting_block">
-                <span class="sorts_title">Сортировка:</span>
-                <select class="sorts">
-                    <option>Price asc</option>
-                    <option>Price desc</option>
-                    <option>Date asc</option>
-                    <option>Date desc</option>
-                </select>
+                <span class="sorts_title">{% trans 'Сортировка' %}:</span>
+                <div class="sorts">
+                    <span class="current_sort">
+                        {% if sort == 'new' %}
+                           {% trans 'Самые новые' %}
+                        {% elif sort == 'old' %} 
+                            {% trans 'Самые старые' %}
+                        {% elif sort == 'A-Z' %}
+                            {% trans 'От А-Я' %}
+                        {% elif sort == 'Z-A' %}
+                            {% trans 'От Я-А' %}
+                        {% endif %}
+                        <i class="fas fa-sort-down"></i>
+                    </span>
+                    <a href="{% url 'catalog:sub_category_list' sub_cat_name 'new' %}">{% trans 'Самые новые' %}</a>
+                    <a href="{% url 'catalog:sub_category_list' sub_cat_name 'old' %}">{% trans 'Самые старые' %}</a>
+                    <a href="{% url 'catalog:sub_category_list' sub_cat_name 'A-Z' %}">{% trans 'От А-Я' %}</a>
+                    <a href="{% url 'catalog:sub_category_list' sub_cat_name 'Z-A' %}">{% trans 'От Я-А' %}</a>
+                </div>
             </div>
         </div>
         <div class="catalog_items">
         	{% if items %}
         	{% for item in items %}
 	            <div class="cat_item">
-	                <a href="{% url 'catalog:item_detail' item.sub_category item.model %}"><div class="preview" alt="" style="background-image: url('{{item.preview_image.url}}')"></div></a>
+	                <a href="{% url 'catalog:item_detail' item.sub_category sort item.model %}"><div class="preview" alt="" style="background-image: url('{{item.preview_image.url}}')"></div></a>
 	                <div class="prod_logo" style="background-image: url('{{item.producer_logo.url}}')"></div>
 	                <ul class="short_char">
 	                    <li class="model">
-	                        <span class="char_title">Model:</span>
+	                        <span class="char_title">{% trans 'Модель' %}:</span>
 	                        <span class="char_cont">{{item.model}}</span>
 	                    </li>
 	                    <li class="producer">
-	                        <span class="char_title">Producer:</span>
+	                        <span class="char_title">{% trans 'Создатель' %}:</span>
 	                        <span class="char_cont">{{item.producer}}</span>
 	                    </li>
 	                    <li class="prod_country">
-	                        <span class="char_title">Country:</span>
+	                        <span class="char_title">{% trans 'Страна' %}:</span>
 	                        <span class="char_cont">{{item.country}}</span>
 	                    </li>
 	                </ul>
-	                <a href="{% url 'catalog:item_detail' item.sub_category item.model %}" class="und_none"><div class="more">More<span></span></div></a>
+	                <a href="{% url 'catalog:item_detail' item.sub_category sort item.model %}" class="und_none"><div class="more">{% trans 'Больше' %}<span></span></div></a>
 	            </div>
             {% endfor %}
             {% endif %}
@@ -55,12 +70,3 @@
         </div>
     </main>
 {% endblock %}
-{% if items and sub_cat_name %}
-    <h2>{{ sub_cat_name }}</h2>
-    {% for item in items %}
-        <li>{{item.model}}</li>
-        <li>{{item.producer}}</li>
-        <li>{{item.country}}</li>
-        <a href="{% url 'catalog:item_detail' item.sub_category item.model %}">More</a></br>
-    {% endfor %}
-{% endif %}
