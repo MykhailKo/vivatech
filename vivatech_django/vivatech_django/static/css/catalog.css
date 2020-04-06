@@ -32,7 +32,7 @@ body {
 	margin-top: -5vh;
 }
 .catalog_main {
-	width: 85vw;
+	width: 90vw;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 10vh;
@@ -41,6 +41,7 @@ body {
 	height: 5vh;
 	width: 100%;
 	display: flex;
+	flex-flow: row;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -50,23 +51,55 @@ body {
 	font-weight: 800;
 	color: #f293a2;
 }
+.sorting_block {
+	display: flex;
+}
 .sorts_title {
 	font-family: 'Nunito', sans-serif;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	color: #8e99a9;
+	margin-left: -12.5em;
 }
 .sorts {
-	border: none;
-	outline: none;
+	position: absolute;
+	right: 2.5em;
+	display: flex;
+	flex-flow: column;
+	height: 2.2em;
+	align-items: center;
+	overflow: hidden;
 	background-color: #f1f1f1;
 	padding: 0.5em;
-	width: 8em;
+	padding-top: 0.2em;
+	width: 10em;
 	font-size: 0.9em;
+	cursor: pointer;
+	transition: 0.5s;
 }
-.sorts option {
+.sorts_open {
+	height: 10em;
+}
+.sorts a {
 	outline: none;
 	border: none;
+	font-size: 1.1em;
+}
+.current_sort {
+	font-size: 1.1em;	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.current_sort i {
 	font-size: 1em;
+	color: #606060;
+	margin-top: -0.3em;
+	margin-left: 0.3em;
+	transition: 0.5s;
+}
+.rotate_arrow {
+	transform-origin: 50% 65%;
+	transform: rotateZ(180deg);
 }
 .catalog_items {
 	display: flex;
@@ -75,7 +108,7 @@ body {
 	margin-top: 5vh;
 }
 .cat_item {
-	width: 25vw;
+	width: 26.5vw;
 	height: 58vh;
 	background-color: #fff;
 	box-shadow: silver 2px 2px 15px;
@@ -121,7 +154,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 }
 .char_title {
-	font-size: 1.15em;
+	font-size: 1em;
 	color: #d66476;
 }
 .char_cont {

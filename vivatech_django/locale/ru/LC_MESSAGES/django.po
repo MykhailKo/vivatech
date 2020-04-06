@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 14:47+0300\n"
+"POT-Creation-Date: 2020-04-02 11:59+0300\n"
 "PO-Revision-Date: 2020-03-24 11:30+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -266,17 +266,27 @@ msgstr "Новости"
 msgid "news"
 msgstr "Новости"
 
-#: .\vivatech_django\settings.py:120
+#: .\vivatech_django\settings.py:121
 msgid "Russian"
 msgstr "Русский"
 
-#: .\vivatech_django\settings.py:121
+#: .\vivatech_django\settings.py:122
 msgid "English"
 msgstr "Английский"
 
-#: .\vivatech_django\settings.py:122
+#: .\vivatech_django\settings.py:123
 msgid "Ukrainian"
 msgstr "Украинский"
+
+#: .\vivatech_django\templates\about\about.html:4
+#: .\vivatech_django\templates\about\about.html:5
+#: .\vivatech_django\templates\about\about.html:7
+#: .\vivatech_django\templates\base.html:51
+#: .\vivatech_django\templates\base.html:150
+#: .\vivatech_django\templates\home.html:50
+#: .\vivatech_django\templates\home.html:333
+msgid "О нас"
+msgstr ""
 
 #: .\vivatech_django\templates\about\about.html:16
 msgid "Виватек история"
@@ -359,13 +369,6 @@ msgstr ""
 msgid "Новости"
 msgstr ""
 
-#: .\vivatech_django\templates\base.html:51
-#: .\vivatech_django\templates\base.html:150
-#: .\vivatech_django\templates\home.html:50
-#: .\vivatech_django\templates\home.html:333
-msgid "О нас"
-msgstr ""
-
 #: .\vivatech_django\templates\base.html:52
 #: .\vivatech_django\templates\base.html:151
 #: .\vivatech_django\templates\home.html:51
@@ -382,6 +385,12 @@ msgstr ""
 msgid "У Вас есть вопросы? Оставьте свой email и мы с Вами свяжемся."
 msgstr ""
 
+#: .\vivatech_django\templates\base.html:108
+#: .\vivatech_django\templates\catalog\item.html:65
+#: .\vivatech_django\templates\home.html:291
+msgid "Отправить"
+msgstr ""
+
 #: .\vivatech_django\templates\base.html:136
 #: .\vivatech_django\templates\home.html:319
 #: .\vivatech_django\templates\home\contacts.html:21
@@ -394,6 +403,44 @@ msgstr ""
 msgid "Телефон"
 msgstr ""
 
+#: .\vivatech_django\templates\catalog\category.html:21
+msgid "Сортировка"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:23
+msgid "Самые новые"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:24
+msgid "Самые старые"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:25
+msgid "От А-Я"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:26
+msgid "От Я-А"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:38
+msgid "Модель"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:42
+msgid "Создатель"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:46
+#: .\vivatech_django\templates\catalog\item.html:40
+msgid "Страна"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\category.html:50
+#: .\vivatech_django\templates\news\news_detail.html:60
+msgid "Больше"
+msgstr ""
+
 #: .\vivatech_django\templates\catalog\item.html:26
 msgid "Описание"
 msgstr ""
@@ -403,21 +450,24 @@ msgid "Характеристики"
 msgstr ""
 
 #: .\vivatech_django\templates\catalog\item.html:28
+#: .\vivatech_django\templates\catalog\item.html:68
 msgid "Отзывы"
 msgstr ""
 
 #: .\vivatech_django\templates\catalog\item.html:36
-#, fuzzy
-#| msgid "producer"
-msgid "Producer"
-msgstr "изготовитель"
+msgid "Изготовитель"
+msgstr ""
 
 #: .\vivatech_django\templates\catalog\item.html:60
 msgid "Оставить отзыв"
 msgstr ""
 
-#: .\vivatech_django\templates\catalog\item.html:65
-msgid "Send"
+#: .\vivatech_django\templates\catalog\item.html:63
+msgid "Ваше имя"
+msgstr ""
+
+#: .\vivatech_django\templates\catalog\item.html:64
+msgid "Ваш отзыв"
 msgstr ""
 
 #: .\vivatech_django\templates\home.html:96
@@ -490,8 +540,23 @@ msgstr ""
 msgid "Связаться с нами"
 msgstr ""
 
+#: .\vivatech_django\templates\home\contacts.html:51
+msgid "Имя"
+msgstr ""
+
+#: .\vivatech_django\templates\home\contacts.html:59
+msgid "Тема"
+msgstr ""
+
+#: .\vivatech_django\templates\home\contacts.html:63
+msgid "Сообщение"
+msgstr ""
+
+#: .\vivatech_django\templates\home\contacts.html:67
+msgid "Отправить сообщение"
+msgstr ""
+
 #: .\vivatech_django\templates\home\slides_news.html:23
-#: .\vivatech_django\templates\news\news_detail.html:60
 #: .\vivatech_django\templates\news\news_main.html:39
 msgid "Read More"
 msgstr ""
@@ -522,6 +587,11 @@ msgstr ""
 #: .\vivatech_django\templates\news\news_main.html:74
 msgid "Все"
 msgstr ""
+
+#, fuzzy
+#~| msgid "producer"
+#~ msgid "Producer"
+#~ msgstr "изготовитель"
 
 #~ msgid "Hello jobs! Jobs application view for about page."
 #~ msgstr "Привет, широн пидр кста"

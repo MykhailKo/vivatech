@@ -3,6 +3,9 @@
 {% load i18n %}
 {% load i18n_switcher %}
 {% block title %}Vivatech | {% trans 'Контакты' %}{% endblock %}
+{% block js %}
+<script type='text/javascript' src="{% static 'js/form.js' %}"></script>
+{% endblock %}
 {% block page_title %}{% trans 'Контакты' %}{% endblock %}
 {% block breadcrums %}
 <li><a href="{% url 'home:contacts_page' %}">{% trans 'Контакты' %}</a></li>
@@ -48,23 +51,23 @@
                 </div>
 
                 <div class="col-12  col-md-4">
-                    <input type="text" placeholder="Имя" name="full_name">
+                    <input type="text" placeholder="{% trans 'Имя' %}" name="full_name" id="full_name">
                 </div><!-- col-4 -->
 
                 <div class="col-12 col-md-4">
-                    <input type="email" placeholder="E-mail" name="email">
+                    <input type="email" placeholder="E-mail" name="email" id="email">
                 </div><!-- col-6 -->
 
                 <div class="col-12 col-md-4">
-                    <input type="text" placeholder="Тема" name="subject">
+                    <input type="text" placeholder="{% trans 'Тема' %}" name="subject" id="subject">
                 </div>
 
                 <div class="col-12">
-                    <textarea name="text" rows="12" cols="80" placeholder="Сообщение"></textarea>
+                    <textarea name="text" rows="12" cols="80" placeholder="{% trans 'Сообщение' %}" id="text"></textarea>
                 </div>
 
                 <div class="col-12">
-                    <input type="submit" name="" value="Отправить сообщение" class="button gradient-bg">
+                    <input id="send" type="button" name="" value="{% trans 'Отправить сообщение' %}" class="button gradient-bg">
                 </div>
             </div><!-- row -->
         </div>

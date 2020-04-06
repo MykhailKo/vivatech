@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core import mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 from django.urls import reverse
 from .models import Slide
 from .models import Slider
@@ -14,9 +16,12 @@ def home_slides_news(request):
 
 
 def sending_mail(request):
-    email = request.POST['email']
-    mail.send_mail("Hello from Django", "This is {} new email adress".format(email), "email@gmail.com", [email])
-    return HttpResponseRedirect(reverse('slide/slide.html'))
+    email = request.POST['footer_email']
+    mail.send_mail(" Vivatech | Запрос на помощь в выборе", "Спасибо за Ваш запрос, мы скоро с Вами свяжемся. Ваша почта:".format(email), "email@gmail.com", [email])
+    mail.send_mail(" Vivatech | Запрос на помощь в выборе",
+                   "Поступил запрос на поддержку с почты:".format(email), "email@gmail.com",
+                   ['email@gmail.com'])
+    return HttpResponseRedirect(reverse('home:home'))
 
 
 def contacts_page(request):
@@ -24,9 +29,17 @@ def contacts_page(request):
 
 
 def contacts_send_mail(request):
-    name = request.POST['full_name']
-    email = request.POST['email']
-    subject = request.POST['subject']
-    text = request.POST['text']
-    mail.send_mail("vivatech.com: " + subject, text, "vivatech@mail.com", ["vivatech@mail.com", "tuareg1812@gmail.com"])
-    return HttpResponseRedirect(reverse('home:contacts_page'))
+    values = {
+        'name': request.POST['full_name'],
+        'email': request.POST['email'],
+        'subject': request.POST['subject'],
+        'text': request.POST['text'],
+    }
+    html_message = render_to_string('mail/main_form_mail.html', {'credits': values})
+    plain_text_message = strip_tags(html_message)
+    from_email = "vivatech@mail.com"
+    to_email = ["vivatech@mail.com", "tuareg1812@gmail.com"]
+
+    #mail.send_mail("vivatech.com: " + subject, plain_text_message, from_email, to_email, html_message=html_message)
+    #return HttpResponseRedirect(reverse('home:contacts_page'))
+    return render(request, 'mail/main_form_mail.html', {'credits': values})

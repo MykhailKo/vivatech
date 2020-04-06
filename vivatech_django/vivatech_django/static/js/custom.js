@@ -3,6 +3,17 @@ window.jQuery = window.$ = jQuery;
 $(document).ready(function(){
     // 'use strict';
 
+    // footer form validation
+    $('#footer_form_btn').on('click', function(event){
+        if($('#footer_email').val() == ''){
+            event.preventDefault();
+            alert("Вы не нписали свою почту!");
+        }
+        else {
+            $(this).attr('type', 'submit');
+        }
+    });
+
     // Main Navigation
     $( '.hamburger-menu' ).on( 'click', function() {
         $(this).toggleClass('open');

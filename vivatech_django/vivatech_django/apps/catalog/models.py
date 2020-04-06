@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
+from django_better_admin_arrayfield.models.fields import ArrayField
 from django.utils.translation import gettext_lazy as _
 
 
@@ -36,7 +36,8 @@ class Item(models.Model):
     country = models.CharField(max_length=200, help_text = _('Country of manufacture'), verbose_name = _('country'))
     pub_date = models.DateTimeField(verbose_name = _('date published'))
     description = models.TextField(verbose_name = _('description'))
-    characteristics = ArrayField(models.CharField(max_length=200, verbose_name = _('characteristics')))
+    characteristics_ru = ArrayField(models.CharField(max_length=200, verbose_name = _('characteristics')), default=list)
+    characteristics_uk = ArrayField(models.CharField(max_length=200, verbose_name=_('characteristics')), default=list)
 
     def __str__(self):
         return self.model

@@ -12,8 +12,8 @@
 {% block page_title %}Каталог{% endblock %}
 {% block breadcrums %}
 <li><a href="{% url 'catalog:main_category'%}">{% trans 'Каталог' %}</a></li>
-<li><a href="{% url 'catalog:sub_category_list' sub_cat_name %}">{{ sub_cat_name }}</a></li>
-<li><a href="{% url 'catalog:item_detail' sub_cat_name item.model %}">{{ item.model }}</a></li>
+<li><a href="{% url 'catalog:sub_category_list' sub_cat_name sort %}">{{ sub_cat_name }}</a></li>
+<li><a href="{% url 'catalog:item_detail' sub_cat_name sort item.model %}">{{ item.model }}</a></li>
 {% endblock %}
 {% block header_img %}<img class="header-img" src="{% static 'images/service-bg.png' %}" alt="">{% endblock %}
 
@@ -33,11 +33,11 @@
                            <ul class="main_prop">
                                <li class="model">{{item.model}}</li>
                                <li class="producer">
-                                  <span class="char_title">{% trans 'Producer' %}:</span>
+                                  <span class="char_title">{% trans 'Изготовитель' %}:</span>
                                   <span class="char_cont">{{item.producer}}</span>
                                </li>
                                <li class="prod_country">
-                                  <span class="char_title">Country:</span>
+                                  <span class="char_title">{% trans 'Страна' %}:</span>
                                   <span class="char_cont">{{item.country}}</span>
                                </li>
                            </ul>
@@ -49,23 +49,32 @@
                    </div>
                    <div class="prop_block char">
                        <ul class="char_list">
-                           {% if item.zcharacteristics %}
-                                {% for c in item.characteristics %}
-                                    <li>{{c}}</li>
-                                {% endfor %}
-                           {% endif %}
+                           {% get_current_language as LANGUAGE_CODE %}
+                                {% if  LANGUAGE_CODE == 'uk' %}
+                                    {% if item.characteristics_uk %}
+                                        {% for c in item.characteristics_uk %}
+                                            <li>{{c}}</li>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                    {% if item.characteristics_ru %}
+                                        {% for c in item.characteristics_ru %}
+                                            <li>{{c}}</li>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endif %}
                        </ul>
                    </div>
                    <div class="prop_block reviews">
                         <span class="rev_title">{% trans 'Оставить отзыв' %}</span>
-                       <form class="review_form" action="{% url 'catalog:leave_review' item.sub_category.name item.model %}" method="POST">
+                       <form class="review_form" action="{% url 'catalog:leave_review' item.sub_category.name sort item.model %}" method="POST">
                             {% csrf_token %}
-                           <input type="text" name="full_name" class="review_name" placeholder="Your name">
-                           <textarea class="review_mes" name="text" placeholder="Your review" rows="3"></textarea>
-                           <button type="submit" class="button gradient-bg review_sub">{% trans 'Send' %}</button>
+                           <input type="text" name="full_name" class="review_name" placeholder="{% trans 'Ваше имя' %}">
+                           <textarea class="review_mes" name="text" placeholder="{% trans 'Ваш отзыв' %}" rows="3"></textarea>
+                           <button type="submit" class="mr button gradient-bg review_sub">{% trans 'Отправить' %}</button>
                        </form>
                        <ul class="reviews_list">
-                            <span class="rev_title">Отзывы</span>
+                            <span class="rev_title">{% trans 'Отзывы' %}</span>
                             {% if reviews %}
                                 {% for r in reviews %}
                                     <li>

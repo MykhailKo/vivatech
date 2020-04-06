@@ -7,6 +7,8 @@
     <orderEntry type="module" module-name="ta-lab-04" />
     <orderEntry type="module" module-name="dm-lab-03" />
     <orderEntry type="module" module-name="locale" />
+    <orderEntry type="module" module-name="ta-lab-5" />
+    <orderEntry type="module" module-name="srm-lab-07" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

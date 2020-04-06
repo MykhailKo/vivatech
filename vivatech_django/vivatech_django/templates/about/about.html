@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
-{% block title %}Vivatech | О нас{% endblock %}
-{% block page_title %}О нас{% endblock %}
+{% block title %}Vivatech | {% trans 'О нас' %}{% endblock %}
+{% block page_title %}{% trans 'О нас' %}{% endblock %}
 {% block breadcrums %}
-<li><a href="{% url 'about_page' %}">О нас</a></li>
+<li><a href="{% url 'about_page' %}">{% trans 'О нас' %}</a></li>
 {% endblock %}
 {% block header_img %}<img class="header-img" src="{% static 'images/about-bg.png' %}" alt="">{% endblock %}
 
@@ -63,23 +63,42 @@
 
 	                        <div class="entry-content">
 	                            <div class="job_block">
+                                    {% get_current_language as LANGUAGE_CODE %}
 	                                <ul class="job_req">
 	                                    <span class="job_title">{% trans 'Требования' %}</span>
-	                                    {% for r in job.requirements %}
-	                                    	<li>{{r}}</li>
-	                                   	{% endfor %}
+                                        {% if LANGUAGE_CODE == 'ru' %}
+                                            {% for r in job.requirements_ru %}
+                                                <li>{{r}}</li>
+                                            {% endfor %}
+                                        {% elif LANGUAGE_CODE == 'uk' %}
+                                            {% for r in job.requirements_uk %}
+                                                <li>{{r}}</li>
+                                            {% endfor %}
+                                        {% endif %}
 	                                </ul>
 	                                <ul class="job_resp">
 	                                    <span class="job_title">{% trans 'Обязанности' %}</span>
-	                                    {% for res in job.responsibilities %}
-	                                    	<li>{{res}}</li>
-	                                    {% endfor %}
+                                        {% if LANGUAGE_CODE == 'ru' %}
+                                            {% for res in job.responsibilities_ru %}
+	                                    	    <li>{{res}}</li>
+	                                        {% endfor %}
+                                        {% elif LANGUAGE_CODE == 'uk' %}
+                                            {% for res in job.responsibilities_uk %}
+	                                    	    <li>{{res}}</li>
+	                                        {% endfor %}
+                                        {% endif %}
 	                                </ul>
 	                                <ul class="job_prep">
 	                                    <span class="job_title">{% trans 'Мы предлагаем' %}</span>
-	                                    {% for res in job.conditions %}
-	                                    	<li>{{res}}</li>
-	                                    {% endfor %}
+                                        {% if LANGUAGE_CODE == 'ru' %}
+                                            {% for res in job.conditions_ru %}
+	                                    	    <li>{{res}}</li>
+	                                        {% endfor %}
+                                        {% elif LANGUAGE_CODE == 'uk' %}
+                                            {% for res in job.conditions_uk %}
+	                                    	    <li>{{res}}</li>
+	                                        {% endfor %}
+                                        {% endif %}
 	                                </ul>
 	                            </div>
 	                        </div>
