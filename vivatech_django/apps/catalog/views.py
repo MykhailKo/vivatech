@@ -6,7 +6,7 @@ from .models import Item, SubCategory, Category, Review
 
 
 def main_categories(request):
-    categories = Category.objects.all()
+    categories = Category.objects.all().order_by('priority')
     sub_categories = SubCategory.objects.all()
     return render(request, 'catalog/catalog.html', {'categories' : categories, 'sub_categories' : sub_categories})
 
