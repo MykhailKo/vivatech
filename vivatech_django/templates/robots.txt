@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /
+
+User-agent: GoogleBot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+#Sitemap: http://vivatec.com.ua/sitemap.xml
+Host: http://vivatec.com.ua/

@@ -1,0 +1,595 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-02 11:59+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: .\vivatech_django\apps\catalog\apps.py:7
+msgid "Catalog"
+msgstr "Каталог"
+
+#: .\vivatech_django\apps\catalog\models.py:7
+msgid "Name of your category"
+msgstr "Назва вашої категорії"
+
+#: .\vivatech_django\apps\catalog\models.py:7
+#: .\vivatech_django\apps\catalog\models.py:19
+#: .\vivatech_django\apps\news\models.py:8
+msgid "name"
+msgstr "назва"
+
+#: .\vivatech_django\apps\catalog\models.py:8
+msgid "icon"
+msgstr "значок"
+
+#: .\vivatech_django\apps\catalog\models.py:14
+#: .\vivatech_django\apps\news\models.py:14
+msgid "Category"
+msgstr "Категорія"
+
+#: .\vivatech_django\apps\catalog\models.py:15
+#: .\vivatech_django\apps\news\models.py:15
+msgid "Categories"
+msgstr "Категорії"
+
+#: .\vivatech_django\apps\catalog\models.py:19
+msgid "Name of your sub category"
+msgstr "Назва підкатегорії"
+
+#: .\vivatech_django\apps\catalog\models.py:20
+msgid "category"
+msgstr "категорія"
+
+#: .\vivatech_django\apps\catalog\models.py:26
+msgid "Sub category"
+msgstr "Підкатегорія"
+
+#: .\vivatech_django\apps\catalog\models.py:27
+msgid "Sub categories"
+msgstr "Підкатегорії"
+
+#: .\vivatech_django\apps\catalog\models.py:31
+msgid "sub category"
+msgstr "підкатегорія"
+
+#: .\vivatech_django\apps\catalog\models.py:32
+#: .\vivatech_django\apps\news\models.py:22
+msgid "preview image"
+msgstr "картинка"
+
+#: .\vivatech_django\apps\catalog\models.py:33
+msgid "Name of your model"
+msgstr "Назва вашої моделі"
+
+#: .\vivatech_django\apps\catalog\models.py:33
+msgid "Model name"
+msgstr "Назва моделі"
+
+#: .\vivatech_django\apps\catalog\models.py:34
+msgid "Producer name"
+msgstr "Назва виробника"
+
+#: .\vivatech_django\apps\catalog\models.py:34
+msgid "producer"
+msgstr "виробник"
+
+#: .\vivatech_django\apps\catalog\models.py:35
+msgid "producer logo"
+msgstr "логотип виробника"
+
+#: .\vivatech_django\apps\catalog\models.py:36
+msgid "Country of manufacture"
+msgstr "Країна виробник"
+
+#: .\vivatech_django\apps\catalog\models.py:36
+msgid "country"
+msgstr "країна"
+
+#: .\vivatech_django\apps\catalog\models.py:37
+#: .\vivatech_django\apps\news\models.py:21
+msgid "date published"
+msgstr "дата опублікування"
+
+#: .\vivatech_django\apps\catalog\models.py:38
+msgid "description"
+msgstr "опис"
+
+#: .\vivatech_django\apps\catalog\models.py:39
+msgid "characteristics"
+msgstr "характеристики"
+
+#: .\vivatech_django\apps\catalog\models.py:45
+msgid "Item"
+msgstr "Предмет"
+
+#: .\vivatech_django\apps\catalog\models.py:46
+msgid "Items"
+msgstr "Предмети"
+
+#: .\vivatech_django\apps\catalog\models.py:51
+msgid "author name"
+msgstr "ім'я автора"
+
+#: .\vivatech_django\apps\catalog\models.py:52
+msgid "comment"
+msgstr "коментар"
+
+#: .\vivatech_django\apps\catalog\models.py:53
+msgid "data published"
+msgstr "опубліковані дані"
+
+#: .\vivatech_django\apps\catalog\models.py:59
+msgid "Review"
+msgstr "Відгук"
+
+#: .\vivatech_django\apps\catalog\models.py:60
+msgid "Reviews"
+msgstr "Відгуки"
+
+#: .\vivatech_django\apps\home\apps.py:7
+msgid "Home"
+msgstr "Головна"
+
+#: .\vivatech_django\apps\home\models.py:7
+#: .\vivatech_django\apps\home\models.py:16
+msgid "title"
+msgstr "назва"
+
+#: .\vivatech_django\apps\home\models.py:10
+msgid "Slide"
+msgstr "Слайд"
+
+#: .\vivatech_django\apps\home\models.py:11
+msgid "Slides"
+msgstr "Слайди"
+
+#: .\vivatech_django\apps\home\models.py:15
+msgid "Backeground image"
+msgstr "Фонове зображення"
+
+#: .\vivatech_django\apps\home\models.py:17
+#: .\vivatech_django\apps\news\models.py:23
+msgid "text"
+msgstr "текст"
+
+#: .\vivatech_django\apps\home\models.py:18
+msgid "Link"
+msgstr "Посилання"
+
+#: .\vivatech_django\apps\home\models.py:25
+msgid "Slider"
+msgstr "Слайдер"
+
+#: .\vivatech_django\apps\home\models.py:26
+msgid "Sliders"
+msgstr "Слайдери"
+
+#: .\vivatech_django\apps\jobs\apps.py:7
+#: .\vivatech_django\apps\jobs\models.py:18
+msgid "Jobs"
+msgstr "Вакансії"
+
+#: .\vivatech_django\apps\jobs\models.py:7
+#, fuzzy
+#| msgid "description"
+msgid "Position"
+msgstr "опис"
+
+#: .\vivatech_django\apps\jobs\models.py:8
+msgid "Requirements"
+msgstr "Вимоги"
+
+#: .\vivatech_django\apps\jobs\models.py:9
+msgid "Responsibilities"
+msgstr "Обов’язки"
+
+#: .\vivatech_django\apps\jobs\models.py:10
+msgid "Conditions"
+msgstr "Умови"
+
+#: .\vivatech_django\apps\jobs\models.py:17
+msgid "Job"
+msgstr "Вакансія"
+
+#: .\vivatech_django\apps\jobs\models.py:22
+msgid "Name"
+msgstr "Ім'я"
+
+#: .\vivatech_django\apps\jobs\models.py:23
+msgid "Country"
+msgstr "Країна"
+
+#: .\vivatech_django\apps\jobs\models.py:24
+msgid "Brand website"
+msgstr "Веб-сайт партнера"
+
+#: .\vivatech_django\apps\jobs\models.py:25
+msgid "Logo"
+msgstr "Логотип"
+
+#: .\vivatech_django\apps\jobs\models.py:31
+msgid "Brand"
+msgstr "Партнер"
+
+#: .\vivatech_django\apps\jobs\models.py:32
+msgid "Brands"
+msgstr "Партнери"
+
+#: .\vivatech_django\apps\jobs\models.py:36
+msgid "Title"
+msgstr "Назва"
+
+#: .\vivatech_django\apps\jobs\models.py:37
+msgid "Icon"
+msgstr "Іконка"
+
+#: .\vivatech_django\apps\jobs\models.py:38
+msgid "Text"
+msgstr "Текст"
+
+#: .\vivatech_django\apps\jobs\models.py:44
+msgid "Service"
+msgstr "Сервіс"
+
+#: .\vivatech_django\apps\jobs\models.py:45
+msgid "Services"
+msgstr "Сервіси"
+
+#: .\vivatech_django\apps\news\apps.py:7
+#: .\vivatech_django\apps\news\models.py:33
+#: .\vivatech_django\apps\news\models.py:34
+msgid "News"
+msgstr "Новини"
+
+#: .\vivatech_django\apps\news\models.py:19
+msgid "news"
+msgstr "новини"
+
+#: .\vivatech_django\settings.py:121
+msgid "Russian"
+msgstr "російська"
+
+#: .\vivatech_django\settings.py:122
+msgid "English"
+msgstr "Англійська"
+
+#: .\vivatech_django\settings.py:123
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: .\vivatech_django\templates\about\about.html:4
+#: .\vivatech_django\templates\about\about.html:5
+#: .\vivatech_django\templates\about\about.html:7
+#: .\vivatech_django\templates\base.html:51
+#: .\vivatech_django\templates\base.html:150
+#: .\vivatech_django\templates\home.html:50
+#: .\vivatech_django\templates\home.html:333
+msgid "О нас"
+msgstr "Про нас"
+
+#: .\vivatech_django\templates\about\about.html:16
+msgid "Виватек история"
+msgstr "Віватек історія"
+
+#: .\vivatech_django\templates\about\about.html:31
+msgid "Вакансии"
+msgstr "Вакансії"
+
+#: .\vivatech_django\templates\about\about.html:38
+msgid "Профессионализм"
+msgstr "Професіоналізм"
+
+#: .\vivatech_django\templates\about\about.html:48
+msgid "Качество"
+msgstr "Якість"
+
+#: .\vivatech_django\templates\about\about.html:67
+msgid "Требования"
+msgstr "Вимоги"
+
+#: .\vivatech_django\templates\about\about.html:73
+#, fuzzy
+#| msgid "Новости"
+msgid "Обязанности"
+msgstr "Новини"
+
+#: .\vivatech_django\templates\about\about.html:79
+msgid "Мы предлагаем"
+msgstr "Пропозіції"
+
+#: .\vivatech_django\templates\about\about.html:99
+msgid "Наши партнеры"
+msgstr "Наші партнери"
+
+#: .\vivatech_django\templates\about\about.html:121
+msgid "Сервисное обслуживание"
+msgstr "Сервісне обслуговування"
+
+#: .\vivatech_django\templates\admin\base_site.html:27
+msgid "Documentation"
+msgstr "Документація"
+
+#: .\vivatech_django\templates\admin\base_site.html:31
+msgid "Change password"
+msgstr "Змінити пароль"
+
+#: .\vivatech_django\templates\admin\base_site.html:33
+msgid "Log out"
+msgstr "Вийти"
+
+#: .\vivatech_django\templates\base.html:48
+#: .\vivatech_django\templates\base.html:86
+#: .\vivatech_django\templates\base.html:148
+#: .\vivatech_django\templates\home.html:47
+#: .\vivatech_django\templates\home.html:331
+msgid "Главная"
+msgstr "Головна"
+
+#: .\vivatech_django\templates\base.html:49
+#: .\vivatech_django\templates\base.html:149
+#: .\vivatech_django\templates\catalog\catalog.html:8
+#: .\vivatech_django\templates\catalog\catalog.html:10
+#: .\vivatech_django\templates\catalog\category.html:8
+#: .\vivatech_django\templates\catalog\category.html:10
+#: .\vivatech_django\templates\catalog\item.html:14
+#: .\vivatech_django\templates\home.html:48
+#: .\vivatech_django\templates\home.html:332
+msgid "Каталог"
+msgstr "Каталог"
+
+#: .\vivatech_django\templates\base.html:50
+#: .\vivatech_django\templates\base.html:152
+#: .\vivatech_django\templates\home.html:49
+#: .\vivatech_django\templates\home.html:271
+#: .\vivatech_django\templates\home.html:335
+#: .\vivatech_django\templates\news\news_detail.html:8
+#: .\vivatech_django\templates\news\news_detail.html:10
+#: .\vivatech_django\templates\news\news_main.html:4
+#: .\vivatech_django\templates\news\news_main.html:5
+#: .\vivatech_django\templates\news\news_main.html:7
+msgid "Новости"
+msgstr "Новини"
+
+#: .\vivatech_django\templates\base.html:52
+#: .\vivatech_django\templates\base.html:151
+#: .\vivatech_django\templates\home.html:51
+#: .\vivatech_django\templates\home.html:316
+#: .\vivatech_django\templates\home.html:334
+#: .\vivatech_django\templates\home\contacts.html:5
+#: .\vivatech_django\templates\home\contacts.html:6
+#: .\vivatech_django\templates\home\contacts.html:8
+msgid "Контакты"
+msgstr "Контакти"
+
+#: .\vivatech_django\templates\base.html:103
+#: .\vivatech_django\templates\home.html:287
+msgid "У Вас есть вопросы? Оставьте свой email и мы с Вами свяжемся."
+msgstr "У вас є питання? Залиште свій email і ми з Вами зв'яжемось."
+
+#: .\vivatech_django\templates\base.html:108
+#: .\vivatech_django\templates\catalog\item.html:65
+#: .\vivatech_django\templates\home.html:291
+msgid "Отправить"
+msgstr "Відправити"
+
+#: .\vivatech_django\templates\base.html:136
+#: .\vivatech_django\templates\home.html:319
+#: .\vivatech_django\templates\home\contacts.html:21
+msgid "Адрес"
+msgstr "Адреса"
+
+#: .\vivatech_django\templates\base.html:137
+#: .\vivatech_django\templates\home.html:320
+#: .\vivatech_django\templates\home\contacts.html:22
+msgid "Телефон"
+msgstr "Телефон"
+
+#: .\vivatech_django\templates\catalog\category.html:21
+msgid "Сортировка"
+msgstr "Сортування"
+
+#: .\vivatech_django\templates\catalog\category.html:23
+msgid "Самые новые"
+msgstr "Найновіші"
+
+#: .\vivatech_django\templates\catalog\category.html:24
+msgid "Самые старые"
+msgstr "Найстаріші"
+
+#: .\vivatech_django\templates\catalog\category.html:25
+msgid "От А-Я"
+msgstr "Від А-Я"
+
+#: .\vivatech_django\templates\catalog\category.html:26
+msgid "От Я-А"
+msgstr "Від Я-А"
+
+#: .\vivatech_django\templates\catalog\category.html:38
+msgid "Модель"
+msgstr "Модель"
+
+#: .\vivatech_django\templates\catalog\category.html:42
+msgid "Создатель"
+msgstr "Виробник"
+
+#: .\vivatech_django\templates\catalog\category.html:46
+#: .\vivatech_django\templates\catalog\item.html:40
+msgid "Страна"
+msgstr "Країна"
+
+#: .\vivatech_django\templates\catalog\category.html:50
+#: .\vivatech_django\templates\news\news_detail.html:60
+msgid "Больше"
+msgstr "Більше"
+
+#: .\vivatech_django\templates\catalog\item.html:26
+msgid "Описание"
+msgstr "Опис"
+
+#: .\vivatech_django\templates\catalog\item.html:27
+msgid "Характеристики"
+msgstr "Характеристики"
+
+#: .\vivatech_django\templates\catalog\item.html:28
+#: .\vivatech_django\templates\catalog\item.html:68
+msgid "Отзывы"
+msgstr "Відгуки"
+
+#: .\vivatech_django\templates\catalog\item.html:36
+msgid "Изготовитель"
+msgstr "Виробник"
+
+#: .\vivatech_django\templates\catalog\item.html:60
+msgid "Оставить отзыв"
+msgstr "Залишити відгук"
+
+#: .\vivatech_django\templates\catalog\item.html:63
+msgid "Ваше имя"
+msgstr "Ваше ім'я"
+
+#: .\vivatech_django\templates\catalog\item.html:64
+#, fuzzy
+#| msgid "Оставить отзыв"
+msgid "Ваш отзыв"
+msgstr "Залишити відгук"
+
+#: .\vivatech_django\templates\home.html:96
+msgid "Наши направления"
+msgstr "Наші напрямки"
+
+#: .\vivatech_django\templates\home.html:104
+msgid "Cardioology"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:112
+#: .\vivatech_django\templates\home.html:130
+#: .\vivatech_django\templates\home.html:148
+#: .\vivatech_django\templates\home.html:166
+#: .\vivatech_django\templates\home.html:184
+#: .\vivatech_django\templates\home.html:202
+#: .\vivatech_django\templates\home.html:220
+#: .\vivatech_django\templates\home.html:238
+#: .\vivatech_django\templates\home.html:256
+msgid "read more"
+msgstr "Детальніше"
+
+#: .\vivatech_django\templates\home.html:122
+msgid "Gastroenterology"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:140
+msgid "Medical Lab"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:158
+msgid "Dental Care"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:176
+msgid "Surgery"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:194
+msgid "Neurology"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:212
+msgid "Orthopaedy"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:230
+msgid "Pediatry"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:248
+msgid "Ophthalmology"
+msgstr ""
+
+#: .\vivatech_django\templates\home.html:328
+msgid "Полезные ссылки"
+msgstr "Корисні посилання"
+
+#: .\vivatech_django\templates\home\contacts.html:18
+msgid "Котактная информация"
+msgstr "Контактна інформація"
+
+#: .\vivatech_django\templates\home\contacts.html:30
+msgid "Карта"
+msgstr "Карта"
+
+#: .\vivatech_django\templates\home\contacts.html:47
+msgid "Связаться с нами"
+msgstr "Зв'язатись із нами"
+
+#: .\vivatech_django\templates\home\contacts.html:51
+msgid "Имя"
+msgstr "Ім'я"
+
+#: .\vivatech_django\templates\home\contacts.html:59
+msgid "Тема"
+msgstr "Тема"
+
+#: .\vivatech_django\templates\home\contacts.html:63
+msgid "Сообщение"
+msgstr "Повідомлення"
+
+#: .\vivatech_django\templates\home\contacts.html:67
+msgid "Отправить сообщение"
+msgstr "Відправити повідомлення"
+
+#: .\vivatech_django\templates\home\slides_news.html:23
+#: .\vivatech_django\templates\news\news_main.html:39
+msgid "Read More"
+msgstr "Детальніше"
+
+#: .\vivatech_django\templates\home\slides_news.html:46
+#: .\vivatech_django\templates\news\news_detail.html:19
+#: .\vivatech_django\templates\news\news_detail.html:49
+#: .\vivatech_django\templates\news\news_main.html:29
+msgid "Дата"
+msgstr "Дата"
+
+#: .\vivatech_django\templates\home\slides_news.html:47
+#: .\vivatech_django\templates\news\news_detail.html:20
+#: .\vivatech_django\templates\news\news_detail.html:50
+#: .\vivatech_django\templates\news\news_main.html:30
+msgid "Категория"
+msgstr "Категорія"
+
+#: .\vivatech_django\templates\news\news_detail.html:34
+#: .\vivatech_django\templates\news\news_main.html:79
+msgid "Последние новости"
+msgstr "Останні новини"
+
+#: .\vivatech_django\templates\news\news_main.html:66
+msgid "Категории"
+msgstr "Категорії"
+
+#: .\vivatech_django\templates\news\news_main.html:74
+msgid "Все"
+msgstr "Усі"
+
+#, fuzzy
+#~| msgid "producer"
+#~ msgid "Producer"
+#~ msgstr "Виробник"
+
+#~ msgid "Send"
+#~ msgstr "Відправити"
