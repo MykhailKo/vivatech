@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 class Category(models.Model):
     name = models.CharField(max_length=200, help_text = _('Name of your category'), verbose_name = _('name'))
     icon = models.ImageField(upload_to='icons_category', help_text="50px50px", verbose_name = _('icon'))#TBD
+    priority = models.IntegerField(null=True)
 
     def __str__(self):
         return self.name

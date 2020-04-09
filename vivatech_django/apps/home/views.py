@@ -10,7 +10,7 @@ from news.models import News
 
 
 def home_slides_news(request):
-    slides = Slider.objects.all()
+    slides = Slider.objects.all().order_by('slide_order_number')
     news = News.objects.all().order_by('-pub_date')[0:3]
     return render(request, 'home/slides_news.html', {'slides': slides, 'news': news})
 
