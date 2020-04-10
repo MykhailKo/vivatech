@@ -1751,3 +1751,108 @@ ul.tabs-nav .tab-nav.active {
 .foot-links ul li a {
     color: #828282;
 }
+@media 
+only screen and (max-device-aspect-ratio: 9/16),
+only screen and (max-device-aspect-ratio: 9/18),
+only screen and (max-device-aspect-ratio: 3/5)
+{
+	.swiper-pagination {
+		padding-top: 1.5em;
+	}
+	.hero-content-wrap {
+		min-height: 87vh;
+		background-color: #f0f5f9;
+	}
+	.hero-content-overlay {
+		height: 50% !important;
+		padding-top: 80%;
+	}
+	.swiper_bg {
+		min-height: 50vh;
+	}
+	.swiper_image {
+		min-height: 125vh;
+	}
+	.hero-content-overlay h1 {
+		font-size: 30px;
+	}
+	.hero-content-overlay p {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	.hero-content-overlay footer {
+		margin-top: 0 !important;
+	}
+	.our-departments-wrap h2 {
+		font-size: 41px;
+	}
+	.to_top {
+		bottom: 0.1em;
+		right: 0.2em;
+	}
+	.news_block {
+		width: 90vw;
+	}
+	.news_preview {
+		height: 30vh;
+		margin-top: 3vh;
+	}
+	.med-history img {
+		max-width: 90vw;
+	}
+	.med-history h2,
+	.medical-team h2, 
+	.quality-services h2, 
+	.services_block h2 {
+		font-size: 40px;
+	}
+	.medical-team-wrap img {
+		max-width: 70%;
+	}
+	.medical-team-wrap {
+		margin-bottom: 3vh;
+	}
+	.medical-team-wrap h4 {
+		margin-top: 10px;
+	}
+	.subscribe-banner h2 {
+		font-size: 22px;
+	}
+	.catalog_main {
+		margin-top: 0;
+	}
+	.catalog_header {
+		height: 16vh;
+	}
+	.sorts_title {
+		margin-left: -15em;
+	    	margin-top: 22vh;
+	}
+	.sorts {
+		margin-top: 22vh;
+		z-index: 20;
+		width: 11em;
+	}
+	.catalog_items {
+		margin-top: 8vh;
+		margin-bottom: 3vh;
+	}
+	.preview {
+		background-size: 90%;
+		height: 60%;
+	}
+	.short_char {
+		height: 30%;
+		align-items: flex-start;
+	    	justify-content: center;
+	    	flex-flow: column wrap;
+	}
+	.short_char li {
+		flex-flow: row wrap;
+		margin-left: 1.5em;
+		margin-bottom: 0.2em;
+	}
+	.item_block {
+		width: 90%;
+	}
+}
