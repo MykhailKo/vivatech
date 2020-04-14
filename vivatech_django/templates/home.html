@@ -6,7 +6,7 @@
 <head>
 	<title>{% block title %}Vivatech |{% endblock %}</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale-1">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
@@ -294,7 +294,7 @@
                     <form method="POST" action="{% url 'home:sending_mail' %}">
                         {% csrf_token %}
                         <input id="footer_email" type="email" placeholder="E-mail address" name="footer_email">
-                        <input id="footer_form_btn" class="button gradient-bg" type="submit" value="{% trans 'Отправить' %}">
+                        <input id="footer_form_btn" class="button gradient-bg" type="submit" value="{% trans 'Send' %}">
                     </form>
                 </div>
             </div>

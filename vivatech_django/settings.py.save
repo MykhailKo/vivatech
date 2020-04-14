@@ -32,8 +32,8 @@ ALLOWED_HOSTS = [
         'vivatec.com.ua',
         ]
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 
 
 
@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.locale.LocaleMiddleware',    
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -122,12 +122,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+gettext = lambda s: s
 LANGUAGES = [
     ('uk', _('Ukrainian')),
-    ('en', _('English')),
     ('ru', _('Russian')),
+    ('en', _('English')), 
 ]
-MODELTRANSLATION_LANGUAGES = ('uk', 'ru')
+MODELTRANSLATION_LANGUAGES = ('ru', 'uk')
 
 MODELTRANSLATION_TRANSLATION_FILES = (
     'catalog.translation',
@@ -138,11 +139,10 @@ MODELTRANSLATION_DEBUG = True
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-prefix_default_language = True
+prefix_default_language = False
 
 LANGUAGE_CODE = 'uk'
-
-#LANGUAGE_SESSION_KEY = 'uk'
+LANGUAGE_SESSION_KEY = 'uk'
 
 TIME_ZONE = 'Europe/Kiev'
 
