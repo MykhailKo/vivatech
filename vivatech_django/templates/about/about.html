@@ -121,7 +121,7 @@
                 	{% for brand in brands %}
 	                <div class="col-12 col-md-6 col-lg-3">
 	                    <div class="medical-team-wrap">
-	                        <a href="{{brand.brand_website}}" target="_blank"><img src="{{brand.logo.url}}" alt=""></a>
+				    <a href="{{brand.brand_website}}" target="_blank"><div class="partner_logo" style="background-image: url({{brand.logo.url}})" ></div></a>
 
 	                        <h4>{{brand.name}}</h4>
 	                        <h5>{{brand.country}}</h5>

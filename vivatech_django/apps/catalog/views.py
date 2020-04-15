@@ -12,11 +12,11 @@ def main_categories(request):
 
 
 def sub_category_list(request, sub_cat_name, sort):
-    items = Item.objects.filter(sub_category__name = sub_cat_name)
-    if sort == 'A-Z': items.order_by('model')
-    elif sort == 'Z-A': items.order_by('-model')
-    elif sort == 'new': items.order_by('pub_date')
-    elif sort == 'old': items.order_by('-pub_date')
+    items = Item.objects.filter(sub_category__name = sub_cat_name).order_by('-pub_date')
+    if sort == 'A-Z': items = items.order_by('model')
+    elif sort == 'Z-A': items = items.order_by('-model')
+    elif sort == 'new': items = items.order_by('pub_date')
+    elif sort == 'old': items = items.order_by('-pub_date')
     return render(request, 'catalog/category.html', {'items': items, 'sub_cat_name': sub_cat_name, 'sort': sort})
 
 
